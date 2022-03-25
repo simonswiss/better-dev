@@ -26,6 +26,7 @@ const nextConfig = {
         },
       ],
     })
+    return config
   },
 }
 
