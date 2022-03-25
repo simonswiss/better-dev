@@ -1,0 +1,23 @@
+import MarkdownLayout from '/components/markdown-layout.js'
+import image from './keyboard-navigation.jpg'
+import Image from 'next/image'
+
+export const meta = {
+  date: '2022-03-06',
+  title: 'My VIDEO post',
+  excerpt:
+    "dfklsf jdslkfj dslkfjd slkfjsd fklsdj fkldsjf lksdjfw, wait a minute. This is really powerful, and I htink you're going to like it",
+  image,
+}
+
+# Hello, post number 2.
+
+This is my second mdx post. How you do feel about this?
+
+I feel pretty _nice_. What about you, {meta.name}?
+
+<Image src={image} />
+
+export default function ({ children }) {
+  return <MarkdownLayout>{children}</MarkdownLayout>
+}

@@ -1,0 +1,24 @@
+import Image from 'next/image'
+
+import MarkdownLayout from 'components/markdown-layout.js'
+import image from './image.png'
+
+export const meta = {
+  date: '2022-03-05',
+  title: 'My second hot tip post',
+  excerpt:
+    "woooow owo wow, wait a minute. This is really powerful, and I htink you're going to like it",
+  image,
+}
+
+export default function ({ children }) {
+  return <MarkdownLayout>{children}</MarkdownLayout>
+}
+
+# Hello, post number 2.
+
+This is my second mdx post. How you do feel about this?
+
+I feel pretty _nice_. What about you, {meta.name}?
+
+<Image src={image} alt="" width={800} height={500} className="object-cover rounded-lg shadow-2xl" />

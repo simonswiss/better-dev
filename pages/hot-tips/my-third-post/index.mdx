@@ -1,0 +1,23 @@
+import MarkdownLayout from 'components/markdown-layout.js'
+import Image from 'next/image'
+import image from './avi-2.jpg'
+
+export const meta = {
+  date: '2022-03-04',
+  title: 'My first hot tip post',
+  excerpt:
+    "This is not every day that you come across something like that. This is really powerful, and I htink you're going to like it",
+  image,
+}
+
+# Hello, world
+
+<Image src={image} alt="" />
+
+This is my first mdx post. How you do feel about this?
+
+I feel pretty _nice_. What about you, {meta.name}?
+
+export default function ({ children }) {
+  return <MarkdownLayout>{children}</MarkdownLayout>
+}
