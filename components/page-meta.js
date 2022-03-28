@@ -7,6 +7,7 @@ export default function PageMeta({ meta }) {
         {meta.title ? `${meta.title} | Better Dev Screencasts` : 'Better Dev Screencasts'}
       </title>
       <meta
+        key="description"
         name="description"
         content={
           meta.description ||

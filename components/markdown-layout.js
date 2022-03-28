@@ -11,7 +11,7 @@ export default function MarkdownLayout({ meta, children }) {
   return (
     <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 md:pt-20 lg:px-8 2xl:max-w-8xl">
       <Metadata meta={meta} />
-      <div className="prose prose-slate mx-auto break-words lg:prose-lg xl:prose-xl">
+      <div className="prose prose-slate mx-auto break-words prose-blockquote:border-indigo-500 prose-blockquote:text-indigo-900 lg:prose-lg xl:prose-xl">
         <h1>{meta.title}</h1>
         <p className="text-base text-slate-500">
           Posted on {format(new Date(meta.date), 'd MMMM yyy')}
@@ -76,37 +76,55 @@ function Metadata({ meta }) {
   return (
     <Head>
       <title>{meta.title} | Better Dev Screencasts</title>
-      <meta name="twitter:site" content="@simonswiss" />
-      <meta name="twitter:creator" content="@simonswiss" />
-      <meta name="twitter:title" content={`${meta.title} | Better Dev Screencasts`} />
-      <meta name="twitter:description" content={meta.excerpt} />
+      <meta name="twitter:site" content="@simonswiss" key="twitter:site" />
+      <meta name="twitter:creator" content="@simonswiss" key="twitter:creator" />
+      <meta
+        name="twitter:title"
+        content={`${meta.title} | Better Dev Screencasts`}
+        key="twitter:title"
+      />
+      <meta name="twitter:description" content={meta.excerpt} key="twitter:description" />
       {meta.image ? (
         <>
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={`https://betterdevscreencasts.com${meta.image}`} />
+          <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+          <meta
+            name="twitter:image"
+            key="twitter:image"
+            content={`https://betterdevscreencasts.com${meta.image.src}`}
+          />
         </>
       ) : (
         <>
-          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:card" content="summary" key="twitter:card" />
           <meta
             name="twitter:image"
+            key="twitter:image"
             content={`https://betterdevscreencasts.com/${socialImageLarge.src}`}
           />
         </>
       )}
-      <meta property="og:url" content={`https://betterdevscreencasts.com${router.pathname}`} />
-      <meta property="og:type" content="article" />
-      <meta property="og:title" content={`${meta.title} | Better Dev Screencasts`} />
-      <meta property="og:description" content={meta.excerpt} />
+      <meta
+        property="og:url"
+        content={`https://betterdevscreencasts.com${router.pathname}`}
+        key="og:url"
+      />
+      <meta property="og:type" content="article" key="og:type" />
+      <meta property="og:title" content={`${meta.title} | Better Dev Screencasts`} key="og:title" />
+      <meta property="og:description" content={meta.excerpt} key="og:description" />
       {meta.image ? (
-        <meta property="og:image" content={`https://betterdevscreencasts.com${meta.image}`} />
+        <meta
+          property="og:image"
+          content={`https://betterdevscreencasts.com${meta.image.src}`}
+          key="og:image"
+        />
       ) : (
         <meta
           property="og:image"
           content={`https://betterdevscreencasts.com/${socialImageLarge.src}`}
+          key="og:image"
         />
       )}
-      <meta name="description" content={meta.excerpt}></meta>
+      <meta name="description" content={meta.excerpt} key="description"></meta>
     </Head>
   )
 }
