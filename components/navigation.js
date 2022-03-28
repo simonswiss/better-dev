@@ -35,7 +35,7 @@ function LinkItem({ path, children }) {
     <Link href={path}>
       <a
         className={`border-b-2 py-1 font-semibold ${
-          router.pathname === path ? 'border-indigo-500' : 'border-transparent'
+          router.pathname.includes(path) ? 'border-indigo-500' : 'border-transparent'
         }`}
       >
         {children}

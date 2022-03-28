@@ -10,10 +10,12 @@ export default function MarkdownLayout({ meta, children }) {
       <Metadata meta={meta} />
       <div className="prose prose-slate mx-auto lg:prose-lg xl:prose-xl">
         <h1>{meta.title}</h1>
-        <p className="text-gray-600">posted on {format(new Date(meta.date), 'd MMMM yyy')}</p>
-        <div className="text-3xl text-gray-600">{meta.excerpt}</div>
+        <p className="text-base text-slate-500">
+          Posted on {format(new Date(meta.date), 'd MMMM yyy')}
+        </p>
+        <div className="mt-8 text-3xl text-slate-600">{meta.excerpt}</div>
         <div className="mt-12">
-          <div className="h-1.5 w-16 bg-cyan-500"></div>
+          <div className="h-0.5 w-16 bg-indigo-500"></div>
           <div className="mt-8">{children}</div>
         </div>
         {/* Author footer */}
@@ -30,7 +32,7 @@ export default function MarkdownLayout({ meta, children }) {
               <p className="font-medium">
                 posted by <span>simonswiss</span>
               </p>
-              <p className="text-gray-500">Front-end developer, video editor, content creator.</p>
+              <p className="text-slate-500">Front-end developer, video editor, content creator.</p>
             </div>
           </div>
           <div className="mt-6 space-y-4">

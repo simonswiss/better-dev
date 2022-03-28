@@ -2,6 +2,19 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Grid({ data, showCategory = false }) {
+  if (data.length === 0) {
+    return (
+      <div className="mx-auto mt-12 max-w-7xl px-4 sm:px-6 md:mt-16 lg:mt-24 lg:px-8 2xl:max-w-8xl">
+        <footer className="inline-block max-w-xl rounded-lg bg-indigo-50 p-8 shadow-sm">
+          <div className="space-y-4">
+            <p className="text-indigo-9d00">
+              There are no posts in this category... yet. Check back soon!
+            </p>
+          </div>
+        </footer>
+      </div>
+    )
+  }
   return (
     <div className="mx-auto mt-12 grid max-w-7xl gap-x-8 gap-y-12 px-4 sm:px-6 md:mt-16 lg:mt-24 lg:grid-cols-2 lg:gap-y-16 lg:px-8 2xl:max-w-8xl 2xl:grid-cols-3">
       {data.map((item) => (
@@ -19,7 +32,7 @@ export default function Grid({ data, showCategory = false }) {
             </a>
           </Link>
           <h2 className="mt-4 text-lg font-semibold">{item.module.meta.title}</h2>
-          <p className="mt-2 text-gray-700">{item.module.meta.excerpt}</p>
+          <p className="mt-2 text-slate-700">{item.module.meta.excerpt}</p>
         </div>
       ))}
     </div>
@@ -45,7 +58,7 @@ function CategoryBadge({ category }) {
 function Badge({ colorClasses, children }) {
   return (
     <p
-      className={`z-10 place-items-cener absolute -top-3 -left-3 grid -rotate-12 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider shadow-lg ${colorClasses}`}
+      className={`place-items-cener absolute -top-3 -left-3 z-10 grid -rotate-12 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider shadow-lg ${colorClasses}`}
     >
       {children}
     </p>
