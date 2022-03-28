@@ -11,7 +11,7 @@ export const meta = {
 }
 
 export default function ({ children }) {
-  return <MarkdownLayout title={meta.title}>{children}</MarkdownLayout>
+  return <MarkdownLayout meta={meta}>{children}</MarkdownLayout>
 }
 
 <Image src={image} alt="" width={800} height={450} className="object-cover rounded-xl" />
