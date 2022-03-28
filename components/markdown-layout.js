@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { format } from 'date-fns'
 import Head from 'next/head'
 import Image from 'next/image'
