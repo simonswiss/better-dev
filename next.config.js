@@ -14,7 +14,7 @@ const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
-    disableStaticImages: true,
+    // disableStaticImages: true,
     domains: ['placehold.it', 'placekitten.com', 'github.com'],
   },
 
