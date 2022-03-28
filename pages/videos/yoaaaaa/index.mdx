@@ -10,14 +10,12 @@ export const meta = {
   image,
 }
 
-# Hello, post number 2.
+export default function ({ children }) {
+  return <MarkdownLayout title={meta.title}>{children}</MarkdownLayout>
+}
 
 This is my second mdx post. How you do feel about this?
 
 I feel pretty _nice_. What about you, {meta.name}?
 
-<Image src={image} />
-
-export default function ({ children }) {
-  return <MarkdownLayout>{children}</MarkdownLayout>
-}
+<Image src={image} width={800} height={450} />

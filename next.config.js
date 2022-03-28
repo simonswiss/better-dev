@@ -15,6 +15,7 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     disableStaticImages: true,
+    domains: ['placehold.it', 'placekitten.com'],
   },
 
   // Supporting images inside the `pages` directory (typically reserved to routes)

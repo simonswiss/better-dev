@@ -3,9 +3,9 @@ import Head from 'next/head'
 
 import PageHeading from '/components/page-heading'
 import GridList from '/components/grid-list'
-import { getVideos } from '/lib/getData'
+import { getDeepDives } from '/lib/getData'
 
-const data = getVideos()
+const data = getDeepDives()
 
 export default function Home() {
   return (

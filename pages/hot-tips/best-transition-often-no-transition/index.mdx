@@ -1,0 +1,113 @@
+import MarkdownLayout from 'components/markdown-layout.js'
+import Image from 'next/image'
+import image from './image.jpg'
+
+export const meta = {
+  date: '2022-03-28',
+  title: 'The Best Video Transition Is Often... No Transition',
+  excerpt: `When cutting from Scene A to Scene B, it's often tempting to use one of the built-in transitions provided by your video editing software, like a "cross-fade". Let's challenge that!`,
+  image,
+}
+
+export default function ({ children }) {
+  return <MarkdownLayout meta={meta}>{children}</MarkdownLayout>
+}
+
+In the next movie you're watching, try paying attention to the transitions used between scenes and camera angles. You'll find out that 99% of the time, there is no transition. Just a raw cut.
+
+- 2 bits of footage:
+
+  1. Talking head
+  2. Code editing
+
+- cross fade example
+
+  - looks decent, but when do you see this in movies, professional edits?
+
+At first, you might feel like using "raw" cuts is being lazy and will look unpolished, but the reality is that in most cases, a straight-up hard cut _will_ look much better.
+
+In the next movie you're watching, try paying attention to the transitions used between scenes and camera angles. You'll find out that 99% of the time, there is no transition. Just a raw cut.
+
+Now – you can have some fun with raw cuts too, they don't always have to be plain and boring!
+
+Let's talk about a simple but extremely powerful cutting technique: "J-cuts" and "L-cuts".
+
+## J-cuts and L-cuts
+
+Instead of applying transition effects, J-cuts and L-cuts decouple the audio and video cuts between Scene A and Scene B. The audio from Scene B comes in before the video from Scene B kicks in (J-cut), or the opposite (L-cut).
+
+They take their name after the way they look in your video editor. Here's what a J-cut looks like...
+
+// image
+
+...and here's a L-cut
+
+//
+
+Makes more sense now, right?
+
+J-cuts an excellent tool to provide context about the next scene before it fully happens.
+
+If the movie industry doesn't use much transition effects, almost every single movie ever produced makes extensive use of these.
+
+A classic example in a movie scene is when someone is about to board on a plane, or head to the train station. You're watching a scene where the actor says goodbye to their family, inside the house, suitcases ready. In the background of that scene, you start hearing the sounds of an airplane taking off.
+
+A few seconds later, the movie cuts to a scene where a plane is taking off in the sky. Because you could hear the plane in the previous scene and gather some context on what was about to happen, the transition makes perfect sense.
+
+Here's an example of that, art directed by your truly:
+
+// video
+
+Next time you watch a movie, try and spot where J-cuts and L-cuts are used to make a scene transition much more interesting and evident!
+
+## But... J-cuts for coding videos? I'm not directing a movie over here!
+
+While the most powerful aspect of J-cuts and L-cuts is storytelling, these cuts are also excellent at doing some "repairs" and saving some of your rough scene transitions.
+
+Take the following on-camera footage. I look away from the camera immediately after my last word, instead of allowing a second or two for the transition to happen.
+
+This makes it kinda hard to tranition to the next scene without things feeling a bit abrupt:
+
+In this situation, using an L-cut and switching to the code scene earlier, while I'm still talking, will give a much smoother result.
+
+Cutting to the code scene while talking didn't feel unnatural, because the context of me speaking was already established.
+
+Don't be afraid to experiment with J-cuts and L-cuts, they're a fantastic tool to add to your editing bag of tricks. In the vast majority of scenarios, they will look more polished and professional than if you had used a transition effect like a cross fade.
+
+## So, you're saying to _never_ use a cross-fade?
+
+Wait, no, that's not what I mean! Never say never. First of all, if cross fades is your jam, by all means use there wherever you want! 🤗
+
+As a rule of thumb - and that's the way I approach video editing personally - I'd say the most appropriate use cases for using a transition effect is when you're trying to mask/hide a little hiccup and improve the situation.
+
+Perhaps your lines of code don't align between scene A or scene B. Merging two scrolling motions together works quite well.
+
+Sometimes, you're cutting between two scenes are are different, but almost _too similar_. Here, adding an effect can accentuate the fact you're changing to a different scene.
+
+An example of that is if you're building a website design from a Figma document. If you're implementing the design well, the Figma comp and your browser might start feeling undistinguishable from one another.
+
+It happened to me a few times, and when reviewing the edit, I was getting confused and missing cues when jumping from browser to Figma, and vice versa.
+
+I found that adding a little effect there like a "blur" transition helped a lot making it clearer.
+
+Video effects are not the only way to solve this problem. You could also add a little sound effect, or even a visual cue (Figma logo on the Figma scenes, for example) to make sure that there is no confusion about what the viewer is looking at.
+
+## Conclusion
+
+Transition effects definitely have very valid use cases when editing a video. There is a reason why they're baked in every single video editing software.
+
+All I'm suggesting is, try and use transition effects to achieve a specific task, in a specific scenario. Don't make it the "default" transition between every scene change in your project, even if it may be tempting to do so at first.
+
+"Transition-effect-as-a-default" usually comes out as a sign of beginner/amateur movie-making, rather than the "premium" edit you're hoping for.
+
+Not shaming anyone here, almost everyone does it. Matter of fact, I dug up my very first video on YouTube (from 2006, 15+ years ago), and sure enough, _every single transition_ has an effect:
+
+// Video embed
+
+I remember absolutely loving the "fade to white" effect. With a short duration, it felt like a camera flash and had this cool vibe to it.
+
+Instead of using it as a special effect in a few particular places, I made it my "default transition".
+
+Present version of simonswiss, 15+ years later of making videos, suggests the following: don't over-do it.
+
+Make using transition effects the special case, instead of the norm.
