@@ -14,10 +14,9 @@ export default function Custom404() {
             <p>
               Shall we go back to the{' '}
               <Link href="/">
-                <>
-                  <a className="text-indigo-500 underline hover:text-indigo-700">homepage</a>?
-                </>
+                <a className="text-indigo-500 underline hover:text-indigo-700">homepage</a>
               </Link>
+              ?
             </p>
           </div>
         </div>

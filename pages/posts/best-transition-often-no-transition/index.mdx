@@ -6,6 +6,7 @@ export const meta = {
   date: '2022-03-28',
   title: 'The Best Video Transition Is Often... No Transition',
   excerpt: `When cutting from Scene A to Scene B, it's often tempting to use one of the built-in transitions provided by your video editing software, like a "cross-fade". Let's challenge that!`,
+  tags: ['editing tips'],
   image,
 }
 
@@ -16,12 +17,12 @@ export default function ({ children }) {
 Let's say you're editing a video, and you have these two bits of footage:
 
 <div className="flex items-center gap-4">
-  <figure>
+  <figure className="mt-0">
     <Image src="https://placekitten.com/400/200" width={400} height={200} alt="" />
     <figcaption>Scene A: Talking head</figcaption>
   </figure>
   <span>+</span>
-  <figure>
+  <figure className="mt-0">
     <Image src="https://placekitten.com/400/200" width={400} height={200} alt="" />
     <figcaption>Scene B: Code editor</figcaption>
   </figure>

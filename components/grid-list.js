@@ -19,7 +19,7 @@ export default function Grid({ data, showCategory = false }) {
     <div className="mx-auto mt-12 grid max-w-7xl gap-x-8 gap-y-12 px-4 sm:px-6 md:mt-16 lg:mt-24 lg:grid-cols-2 lg:gap-y-16 lg:px-8 2xl:max-w-8xl 2xl:grid-cols-3">
       {data.map((item) => (
         <div className="relative" key={item.slug}>
-          {showCategory && <CategoryBadge category={item.category} />}
+          {/* {showCategory && <CategoryBadge category={item.category} />} */}
           <Link href={`/${item.category}/${item.slug}`}>
             <a>
               <Image

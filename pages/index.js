@@ -2,13 +2,13 @@ import PageHeading from '/components/page-heading'
 import GridList from '/components/grid-list'
 import PageMeta from '/components/page-meta'
 
-import { getAllFiles } from '/lib/getData'
+import { getPosts } from '/lib/getData'
 
 const meta = {
   title: 'Helping developer create better screencasts',
 }
 
-const data = getAllFiles()
+const data = getPosts()
 
 export default function Home() {
   return (

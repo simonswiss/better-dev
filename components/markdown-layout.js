@@ -9,28 +9,30 @@ import socialImageLarge from '/public/images/social-large.jpg'
 
 export default function MarkdownLayout({ meta, children }) {
   return (
-    <div className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-8xl">
+    <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 md:pt-20 lg:px-8 2xl:max-w-8xl">
       <Metadata meta={meta} />
-      <div className="prose prose-slate mx-auto lg:prose-lg xl:prose-xl">
+      <div className="prose prose-slate mx-auto break-words lg:prose-lg xl:prose-xl">
         <h1>{meta.title}</h1>
         <p className="text-base text-slate-500">
           Posted on {format(new Date(meta.date), 'd MMMM yyy')}
         </p>
-        <div className="mt-8 text-3xl text-slate-600">{meta.excerpt}</div>
+        <div className="mt-8 text-xl text-slate-600 xl:text-3xl">{meta.excerpt}</div>
         <div className="mt-12">
           <div className="h-0.5 w-16 bg-indigo-500"></div>
           <div className="mt-8">{children}</div>
         </div>
         {/* Author footer */}
         <footer className="not-prose mt-20 rounded-lg bg-white p-8 shadow lg:mt-32">
-          <div className="flex items-center gap-4 text-base">
-            <Image
-              src="/images/twitter-avatar.png"
-              className="rounded-full object-cover"
-              width={80}
-              height={80}
-              alt="avatar for simonswiss"
-            />
+          <div className="flex items-center gap-4 text-sm md:text-base">
+            <div className="shrink-0">
+              <Image
+                src="/images/twitter-avatar.png"
+                className="rounded-full object-cover"
+                width={80}
+                height={80}
+                alt="avatar for simonswiss"
+              />
+            </div>
             <div>
               <p className="font-medium">
                 posted by <span>simonswiss</span>
@@ -38,7 +40,7 @@ export default function MarkdownLayout({ meta, children }) {
               <p className="text-slate-500">Front-end developer, video editor, content creator.</p>
             </div>
           </div>
-          <div className="mt-6 space-y-4">
+          <div className="mt-8 space-y-4">
             <p>Hey, I'm Simon 👋 </p>
 
             <p>
