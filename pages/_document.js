@@ -10,7 +10,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap"
         ></link>
       </Head>
-      <body className="bg-gradient-to-br from-cyan-100  text-cyan-900">
+      <body className="bg-gradient-to-br from-transparent to-cyan-100 text-slate-900">
         <Main />
         <NextScript />
       </body>
