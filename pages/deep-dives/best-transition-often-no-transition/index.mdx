@@ -13,22 +13,31 @@ export default function ({ children }) {
   return <MarkdownLayout meta={meta}>{children}</MarkdownLayout>
 }
 
-In the next movie you're watching, try paying attention to the transitions used between scenes and camera angles. You'll find out that 99% of the time, there is no transition. Just a raw cut.
+Let's say you're editing a video, and you have these two bits of footage:
 
-- 2 bits of footage:
+<div className="flex items-center gap-4">
+  <figure>
+    <Image src="https://placekitten.com/400/200" width={400} height={200} alt="" />
+    <figcaption>Scene A: Talking head</figcaption>
+  </figure>
+  <span>+</span>
+  <figure>
+    <Image src="https://placekitten.com/400/200" width={400} height={200} alt="" />
+    <figcaption>Scene B: Code editor</figcaption>
+  </figure>
+</div>
 
-  1. Talking head
-  2. Code editing
+In hope of achieving a smooth transition between the two, it's often tempting to use one of the transition effects baked in video editing software, like a "cross fade":
 
-- cross fade example
+// clip
 
-  - looks decent, but when do you see this in movies, professional edits?
+- looks decent, but when do you see this in movies, professional edits?
 
 At first, you might feel like using "raw" cuts is being lazy and will look unpolished, but the reality is that in most cases, a straight-up hard cut _will_ look much better.
 
 In the next movie you're watching, try paying attention to the transitions used between scenes and camera angles. You'll find out that 99% of the time, there is no transition. Just a raw cut.
 
-Now – you can have some fun with raw cuts too, they don't always have to be plain and boring!
+Now, you can have some fun with raw cuts too – they don't always have to be plain and boring!
 
 Let's talk about a simple but extremely powerful cutting technique: "J-cuts" and "L-cuts".
 

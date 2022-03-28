@@ -75,7 +75,7 @@ function Metadata({ meta }) {
       <meta name="twitter:site" content="@simonswiss" />
       <meta name="twitter:creator" content="@simonswiss" />
       <meta name="twitter:title" content={`${meta.title} | Better Dev Screencasts`} />
-      <meta name="twitter:description" content={meta.description} />
+      <meta name="twitter:description" content={meta.excerpt} />
       {meta.image ? (
         <>
           <meta name="twitter:card" content="summary_large_image" />
@@ -93,13 +93,13 @@ function Metadata({ meta }) {
       <meta property="og:url" content={`https://betterdevscreencasts.com${router.pathname}`} />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={`${meta.title} | Better Dev Screencasts`} />
-      <meta property="og:description" content={meta.description} />
+      <meta property="og:description" content={meta.excerpt} />
       {meta.image ? (
         <meta property="og:image" content={`https://betterdevscreencasts.com${meta.image}`} />
       ) : (
         <meta property="og:image" content="https://betterdevscreencasts.com/bds-logo.png" />
       )}
-      <meta name="description" content={meta.description}></meta>
+      <meta name="description" content={meta.excerpt}></meta>
     </Head>
   )
 }
