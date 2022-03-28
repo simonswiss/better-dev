@@ -20,7 +20,7 @@ export default function Home() {
           overall video content creation game.
         </p>
       </PageHeading>
-      <GridList data={data} showCategory />
+      <GridList data={data} />
     </>
   )
 }
