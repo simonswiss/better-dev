@@ -22,7 +22,7 @@ export default function MarkdownLayout({ meta, children }) {
         <footer className="not-prose mt-20 rounded-lg bg-white p-8 shadow lg:mt-32">
           <div className="flex items-center gap-4 text-base">
             <Image
-              src="/images/avatar.jpg"
+              src="/images/twitter-avatar.png"
               className="rounded-full object-cover"
               width={80}
               height={80}
