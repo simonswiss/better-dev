@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           key="twitter:image"
           name="twitter:image"
-          content={`https://betterdevscreencasts${socialCardLarge}`}
+          content={`https://betterdevscreencasts.com${socialCardLarge}`}
         />
         <meta key="twitter:creator" name="twitter:creator" content="@simonswiss" />
         <meta
