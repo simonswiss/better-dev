@@ -30,7 +30,6 @@ export default function Navigation() {
 
 function LinkItem({ path, children }) {
   const router = useRouter()
-  console.log(router.pathname, path)
   return (
     <Link href={path}>
       <a

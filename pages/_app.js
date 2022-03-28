@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import '../styles/globals.css'
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
-import socialCardLarge from '../public/images/social-large.png'
+import socialCardLarge from '/public/images/social-large.png'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           key="twitter:image"
           name="twitter:image"
-          content={`https://betterdevscreencasts.com${socialCardLarge}`}
+          content={`https://betterdevscreencasts.com${socialCardLarge.src}`}
         />
         <meta key="twitter:creator" name="twitter:creator" content="@simonswiss" />
         <meta
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         <meta
           key="og:image"
           property="og:image"
-          content={`https://betterdevscreencasts.com${socialCardLarge}`}
+          content={`https://betterdevscreencasts.com${socialCardLarge.src}`}
         />
         <link rel="icon" href="/favicon.ico" />
         {/* <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feeds/feed.xml" />
