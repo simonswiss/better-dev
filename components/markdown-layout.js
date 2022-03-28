@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+import socialImageLarge from '/public/images/social-large.jpg'
+
 export default function MarkdownLayout({ meta, children }) {
   return (
     <div className="mx-auto mt-24 max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-8xl">
@@ -86,7 +88,7 @@ function Metadata({ meta }) {
           <meta name="twitter:card" content="summary" />
           <meta
             name="twitter:image"
-            content="https://betterdevscreencasts.com/images/bds-logo.png"
+            content={`https://betterdevscreencasts.com/${socialImageLarge.src}`}
           />
         </>
       )}
@@ -97,7 +99,10 @@ function Metadata({ meta }) {
       {meta.image ? (
         <meta property="og:image" content={`https://betterdevscreencasts.com${meta.image}`} />
       ) : (
-        <meta property="og:image" content="https://betterdevscreencasts.com/bds-logo.png" />
+        <meta
+          property="og:image"
+          content={`https://betterdevscreencasts.com/${socialImageLarge.src}`}
+        />
       )}
       <meta name="description" content={meta.excerpt}></meta>
     </Head>

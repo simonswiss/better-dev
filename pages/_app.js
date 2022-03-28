@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import '../styles/globals.css'
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
-import socialCardLarge from '/public/images/social-large.png'
+import socialCardLarge from '/public/images/social-large.jpg'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()

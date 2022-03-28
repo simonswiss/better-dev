@@ -24,7 +24,7 @@ export default function Grid({ data, showCategory = false }) {
             <a>
               <Image
                 className="aspect-video rounded-md object-cover shadow-lg"
-                src={item.module.meta?.image || '/images/bds-logo.png'}
+                src={item.module.meta?.image || '/images/social-large.jpg'}
                 alt=""
                 width={800}
                 height={450}
