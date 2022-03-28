@@ -11,7 +11,7 @@ export default function MarkdownLayout({ meta, children }) {
   return (
     <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 md:pt-20 lg:px-8 2xl:max-w-8xl">
       <Metadata meta={meta} />
-      <div className="prose prose-slate mx-auto break-words prose-blockquote:border-indigo-500 prose-blockquote:text-indigo-900 lg:prose-lg xl:prose-xl">
+      <div className="prose prose-slate mx-auto break-words prose-blockquote:border-indigo-500 prose-blockquote:text-indigo-900 prose-figure:mt-0 prose-figcaption:mt-0 lg:prose-lg lg:prose-figure:mt-0 lg:prose-figcaption:mt-0 xl:prose-xl xl:prose-figure:mt-2 xl:prose-figcaption:mt-0 2xl:prose-figcaption:mt-0">
         <h1>{meta.title}</h1>
         <p className="text-base text-slate-500">
           Posted on {format(new Date(meta.date), 'd MMMM yyy')}

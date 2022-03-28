@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.2.2",
     "@mdx-js/loader": "^2.1.0",
     "@next/mdx": "^12.1.0",
     "date-fns": "^2.28.0",
