@@ -37,6 +37,11 @@ export default function Grid({ data }) {
             </Link>
           </h2>
           <p className="mt-2 text-slate-700">{item.module.meta.excerpt}</p>
+          <Link href={`/posts/${item.slug}`}>
+            <a className="mt-4 block font-medium text-indigo-500 hover:underline">
+              Read more &rarr;
+            </a>
+          </Link>
         </div>
       ))}
     </div>
