@@ -20,7 +20,7 @@ export default function Grid({ data }) {
       {data.map((item) => (
         <div className="relative" key={item.slug}>
           <Link href={`/posts/${item.slug}`}>
-            <a>
+            <a className="hover:opacity-80">
               <Image
                 className="aspect-video rounded-md object-cover shadow-lg"
                 src={item.module.meta?.image || '/images/social-large.jpg'}
@@ -30,7 +30,12 @@ export default function Grid({ data }) {
               />
             </a>
           </Link>
-          <h2 className="mt-4 text-lg font-semibold">{item.module.meta.title}</h2>
+
+          <h2 className="mt-4 text-lg font-semibold">
+            <Link href={`/posts/${item.slug}`}>
+              <a className="hover:underline">{item.module.meta.title}</a>
+            </Link>
+          </h2>
           <p className="mt-2 text-slate-700">{item.module.meta.excerpt}</p>
         </div>
       ))}
