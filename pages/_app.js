@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="flex h-full min-h-screen flex-col">
       <Head>
-        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         <meta key="twitter:site" name="twitter:site" content="@simonswiss" />
         <meta
           key="twitter:image"
@@ -30,6 +29,7 @@ function MyApp({ Component, pageProps }) {
           property="og:image"
           content={`https://betterdevscreencasts.com${socialCardLarge.src}`}
         />
+
         <link rel="icon" href="/favicon.ico" />
         {/* <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feeds/feed.xml" />
         <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/feeds/atom.xml" />
