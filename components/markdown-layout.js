@@ -164,12 +164,7 @@ function MailChimpSubscription() {
           </div>
           {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
           <div style={{ position: 'absolute', left: -5000 }} aria-hidden="true">
-            <input
-              type="text"
-              name="b_8d885927e62386721e16f3f16_4e9ecb2eeb"
-              tabIndex="-1"
-              value=""
-            />
+            <input type="text" name="b_8d885927e62386721e16f3f16_4e9ecb2eeb" tabIndex="-1" />
           </div>
           <div className="clear foot">
             <input
