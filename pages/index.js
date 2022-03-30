@@ -1,6 +1,7 @@
 import PageHeading from '/components/page-heading'
 import GridList from '/components/grid-list'
 import PageMeta from '/components/page-meta'
+import CallToAction from 'components/call-to-action'
 
 import image from '/public/images/social-large.jpg'
 
@@ -22,6 +23,7 @@ export default function Home() {
         <p>{meta.description}</p>
       </PageHeading>
       <GridList data={data} />
+      <CallToAction />
     </>
   )
 }
