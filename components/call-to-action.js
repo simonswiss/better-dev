@@ -24,7 +24,7 @@ export default function CallToAction() {
           </div>
         </div>
         <div className="mt-8 space-y-4">
-          <p>Hey, friend! Thank you so much for visiting! ❤️</p>
+          <p>Hey, friend! Thank you so much for visiting ❤️</p>
 
           <p>If you want to be updated when a new post is out, sign up below!</p>
         </div>
