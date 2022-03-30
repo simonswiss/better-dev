@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Better Dev Screencasts</title>
+        <link>https://betterdevscreencasts.com</link>
+        <description>A collection of resources to help developers create better screencasts, and level-up their overall video content creation game.</description>
+        <lastBuildDate>Wed, 30 Mar 2022 01:20:19 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <image>
+            <title>Better Dev Screencasts</title>
+            <url>https://betterdevscreencasts.com//_next/static/media/social-large.441dd7e9.jpg</url>
+            <link>https://betterdevscreencasts.com</link>
+        </image>
+        <copyright>All rights reserved, Better Dev Screencasts</copyright>
+        <item>
+            <title><![CDATA[The Best Video Transition Is Often... No Transition]]></title>
+            <link>https://betterdevscreencasts.com/posts/best-transition-often-no-transition</link>
+            <guid>https://betterdevscreencasts.com/posts/best-transition-often-no-transition</guid>
+            <pubDate>Mon, 28 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[When cutting from Scene A to Scene B, it's often tempting to use one of the built-in transitions provided by your video editing software, like a "cross-fade". Let's challenge that!]]></description>
+        </item>
+    </channel>
+</rss>
