@@ -1,0 +1,313 @@
+import Image from 'next/image'
+
+import MarkdownLayout from '/components/markdown-layout'
+
+import phoneBoothImage from './phone-booth.jpg'
+import carpetsImage from './carpets.jpg'
+import recordingBoothImage from './recording-booth.jpg'
+import diy1 from './diy-1.jpg'
+import diy2 from './diy-2.jpg'
+import diy3 from './diy-3.jpg'
+import diy4 from './diy-4.jpg'
+
+export const meta = {
+  title: 'Preparing Your Room For Audio Recordings',
+  excerpt: `Good audio starts with ideal recording conditions. Let's explore some ways to optimise your room and drastically improve your audio takes!`,
+  date: '2022-03-31',
+  tags: ['audio'],
+  image: diy1,
+}
+
+export default function ({ children }) {
+  return <MarkdownLayout meta={meta}>{children}</MarkdownLayout>
+}
+
+Let's start with something very important: good audio is **critical** if you want to produce high quality screencasts.
+
+It's actually more important than the quality of your camera.
+
+While folks watching your screencasts can tolerate an average video quality, they will likely bail out very quickly if your audio is below a certain perceived threshold.
+
+So here's my suggestion: before you think of getting all fancy with a DSLR camera and expensive lights, make sure you **optimise your setup for good audio recordings**.
+
+## What makes or break a good recording?
+
+Good audio starts with ideal recording conditions. Just like a great meal starts with fresh ingredients.
+
+You can always "save" a meal by adding some salt and other flavours - just like you can "fix" audio with a noise gate, clever EQ or audio repair plugins.
+
+But there's no way around this: nothing will beat a clean raw recording, in optimal conditions.
+
+The right choice of microphone will of course have a big impact on your results. But before we consider audio recording equipment, let's take a step back.
+
+Let's talk about the things you may consider doing, _regardless_ of what microphone you're going to use.
+
+Let's _prepare_ your room for optimal recordings.
+
+## Sound proofing or sound absorbing?
+
+I want to clarify something that often creates confusion. The concepts of _soundproofing_ and _sound absorbing_ are two vastly different things.
+
+**Soundproofing** a room refers to **blocking the outside noise** from coming in. Barking dogs, cars driving by. Birbs chirping.
+
+Or, you know, the daily leafblower routine from your dear neighbour 😅
+
+On the other hand, **sound absorbing** is all about improving the sound quality **inside the room**. As in, removing the dreaded room "reverb", by... _absorbing_ it.
+
+If you were hoping for an easy way to soundproof your space and block the outside noise, I have bad news for you: it's extremely expensive and complicated to do so _properly_.
+
+If that's what you want, you'd be better off buying one of these office "phone booth" pods – and they're not cheap.
+
+<div className="w-96 max-w-full pt-4">
+  <figure>
+    <Image
+      src={phoneBoothImage}
+      width={600}
+      height={800}
+      alt=""
+      className="rounded-2xl object-cover"
+    />
+    <figcaption>Office phone "pod" for one</figcaption>
+  </figure>
+</div>
+
+Instead, what we're going to focus on in this post is how to **deal with the internal sound** of your room.
+
+Let's tackle that nasty room reverberation.
+
+Because while that's a sometimes desired effect for singers or acoustic music instruments, for spoken words and voiceovers, you typically want the driest, cleanest possible vocals, with ideally _zero reverb_ - but good luck with that!
+
+## What causes room reverb?
+
+To be able to _damper_ the reverb in your room, it's important to understand _what_ causes it in the first place.
+
+### Sound is slow
+
+One characteristic of sound is that it travels at a _fairly slow_ speed. Approximately 330m/second.
+
+That's slow enough to witness a noticeable delay when sound has to travel a bit.
+
+I remember as a kid always counting the seconds between a lightning strike and the sound of thunder, and estimate how far away the lightning hit.
+
+### Sound is bouncy
+
+Another characteristic of sound is that is it _bounces off things_ and keeps travelling.
+
+Another thing I loved doing as a kid growing up near mountains was to yell something very loud, and have the mountain yell it right back at me.
+
+In the case of a distant mountain, we've got one single, clean bounce, returning us a **delayed, one-off** sound of our own voice: an **echo**.
+
+### Your're yelling inside a small, bouncy box
+
+Instead of yelling at a distant mountain, when recording a screencast, you'll be talking in a small box.
+
+And if your voice can reach a distant mountain, trust that it can pinball off the 6 faces of your small box a multiple dozens of time.
+
+Kinda like playing squash with a magic bouncy ball, if you can picture that in your mind.
+
+Instead of a single-trip, long distance travel (distant mountain) echo, we get a frenzy of super short-distance trips, agagin and again and again. Every single round-trip creates a very short extra travel time delay.
+
+And that's reverb.
+
+So, reverb is in fact a very rapid echo, repeated over and over, until it eventually dies off.
+
+Because yes, it eventually goes away. And the _whole trick_ to dampering reverb is to create an environment that makes it go away quicker.
+
+## Remove the things that breed reverb
+
+To run wild inside your room, reverb needs two environmental conditions:
+
+1. **Hard, flat surfaces**: just like a magic bouncy ball, sound waves will bounce much better off a hard and flat surface than off something soft and thick.
+
+2. **Straight angles**: sound will bounce off a surface just like, once again, a ball would. If it hits a perpendicular wall, it will bounce right back where it came from.
+
+I have more bad news for you: the vast majority of rooms we use as an office/studio are essentially boxes made of **6 hard, flat surface** sides with **straight angles**.
+
+**Oh no**.
+
+You're starting off with the worst case scenario. A reverb factory, essentially.
+
+The good news? You can basically only improve things from there!
+
+### Do what you can to cut off direct lines of "infinite bounce loop"
+
+Now that you know what creates reverb, you probably understand how to fight reverb.
+
+And like I said, almost anything you do will improve the situation.
+
+Even just adding a desk and a chair in an empty room will already make the situation _much_ better.
+
+Sorry for y'all minimalists out there, but **the more crap you add to the room, the better the reverb situation will get**.
+
+You can still achieve an instagram/unsplash-worthy desk and background feature wall. The secret is to hide all the crap just outside of the camera frame 😅
+
+## Set your benchmark before you start
+
+One thing that I like doing, as it really helps appreciate your room audio improvememnts, is to do a "clap" or "snap" test in the room before making any improvement.
+
+Record yourself claping your hands, snapping your fingers, knocking on desk, walking in high heels in the office, anything that will produce a sharp, distinct sound.
+
+Keep it as your starting point benchmark, and do this test again as you start making improvements to your space.
+
+You'll learn in no time what works and what doesn't, what's a waste of money, and what's a legit life hack.
+
+## Start with low hanging fruit interventions
+
+You need a quick win to boost your motivation, and realise that it's worth spending some time making those improvements.
+
+Remember – the 6 faces of your room (4 walls, floor and ceiling) are all contributing to this reverb mess. Treating each of those has the potential to dramatically improve the situation.
+
+Start with one of them, whichever is the easiest for you. In 99% of cases, this will be your floor.
+
+## Covering a hard floor with fluff - a game changer by itself
+
+If you have hardwood/concrete/hard vinyl floors in your space, your #1 move should be to cover that with some fluffy fabric.
+
+You don't have to break the bank or get a professional carpet fitted. I personally bought 10x 60cm/60cm "office carpet tiles" from Bunnings (the Australian equivalent of Home Depot), which fill most of the floor area.
+
+I also bought a cheap rug from Ikea, mostly for looks, but also because it was mad fluffy.
+
+An added benefits of these carpet tiles is if your house gets flooded like mine did a couple of weeks ago, it's fairly easy to wash them and dry them in the sun:
+
+<figure>
+  <Image src={carpetsImage} width={800} height={450} alt="" className="rounded-2xl object-cover" />
+  <figcaption>Carpet rehab session on the trampoline</figcaption>
+</figure>
+
+The golden rule of combatting reverb is: the thicker/softer/fluffier, the most impactful.
+
+Now go and do the same clap/snap test again.
+
+Holy crap, right?
+
+I _promise_ you: even if you don't do anything else to treat your room, covering the floor with some type of fabric will by itself make a **significant** change for the better.
+
+And by covering the floor, you've greatly reduced the negative impact of your ceiling. You've broken the top/bottom direct line of infinite bounce loop.
+
+## Next up, the wall behind your microphone
+
+The next most important space to treat is the wall directly behind your microphone.
+
+It's the wall you're "speaking into", and therefore the first significant point of impact in terms of soundwaves bouncing around.
+
+From there, the stuff goes everywhere, including right back into the microphone. So if you're able to _absorb_ most of that first impact, you'll be in a really good place.
+
+The neat thing is, the wall behind your microphone is also very likely the wall behind your camera. In other words, no one (but you) will be able to see that wall, and you can get away with some aestethically questionnable DIY solutions.
+
+Speaking of questionable DIY solutions, checking this setup I had when I got my start making screencasts on YouTube:
+
+<figure>
+  <Image
+    src={recordingBoothImage}
+    width={800}
+    height={760}
+    alt=""
+    className="rounded-2xl object-cover"
+  />
+  <figcaption>A plastic storage case with some acoustic foam - it worked wonders!</figcaption>
+</figure>
+
+Good times.
+
+---
+
+**Quick aside**: This post is not about microphones, but the mic you see above is the Blue Yeti. It has a very good sound, but it's also the MVP of catching all the room reverb it can. All of it, and then some. If you're working in an untreated room with a noisy environment, _this is not your mic_.
+
+---
+
+So, really, do what you gotta do here to improve the situation. Acoustic foam, blankets, heck a whole mattress!
+
+If you've got your floor + the wall behind your microphone all fluffed up, you should be in a really good position already!
+
+You know the drill, do the clap/snap test again.
+
+## For the rest, time to get creative!
+
+At that point, you still have 3 hard flat walls, and the ceiling.
+
+That's still a lot of surface for your voice to bounce around and find its way into your mic.
+
+Adding foam tiles on the walls will help, but I found that what works best at this point is to break the straight angles between the remaining exposed sides of your room.
+
+Anything that is thick, soft and fluffy, and is placed between these walls, _will_ help.
+
+### Some valid suggestions
+
+If you have the space (and budget) for it, **a couch** is a fantastic option. It will look great in your on-camera background, it will absorb a metric-tonne of bouncing soundwaves, and will also give you a spot to chill and think about your next screencast.
+
+A bookshelf full of books is also a fabulous choice for many of the same reasons (maybe not the chill spot one).
+
+The shelf itself will likely by a hard surface, but it will still deflect the bouncing soundwaves.
+
+All the paper in those books will _devour_ room reverb for you.
+
+Fluffy teddy bears are excellent reverb absorbers, so if you've got kids, steal a handful of those and put them around the room – your kids will love to know they're _watching you work_.
+
+Clothes are also ultimate reverb eaters. You could have a little rack with some clothes hanging against a corner of the room, or even as cool background decoration.
+
+You get the idea.
+
+Cut lines of bouncing loops. Break angles. Put a lot of stuff near corners of the room (bass traps), as bass frequencies tend to converger there.
+
+You can spend money and get fancy acoustic studio stuff, but honestly, DIY stuff from around the house will work surprisingly well.
+
+## What's left at this point?
+
+That will still leave most of your walls wide open, but if you've got enough stuff around the room, you should be in a place where you're likely happy with your audio.
+
+In a quest of trying to get _really good_ audio in my office, I took a step many may likely not be willing to.
+
+I covered 3 of my 4 walls with thick moving blankets.
+
+Moving blankets are kinda like fancy acoustic blankets, but instead of costing $100+, they cost like 5 bucks, or can be collected for free very easily.
+
+Ok they're not _exactly_ as good as professional acoustic blankets, but honestly they'll get you a good 80% there.
+
+That's what I considered a _life hack_ when I tried it out.
+
+Very nerdy kind of life hack, I guess.
+
+So, the only wall that looks nice in my room is the wall in my YouTube background, with the IKEA cube shelf with some deco items.
+
+Even there, I added some foam tiles, because I became obsessed with removing as much reverb as I could.
+
+The rest of the room looks like the inside of a camping tent, basically.
+
+That was the price to pay to reach the ultimate stage of DIY sound treatment for my room. I don't think I'd recommend this extra step to everyone - only do that if audio quality is critical to you.
+
+## Show us how you did it, Simon
+
+If you're curious about how I hung heavy blankets on the wall, here's what I did.
+
+Mind you, we're renting and cannot put any nails in the walls, so I used 3M removable hooks that I put on the walls.
+
+For the first few blankets, I punched some fancy "ringlets" into the blanket, which I would then hang on the hooks:
+
+<figure>
+  <Image src={diy1} width={800} height={450} alt="" className="rounded-2xl object-cover" />
+  <figcaption>The ultimate budget DIY acoustic blankets</figcaption>
+</figure>
+<figure>
+  <Image src={diy2} width={800} height={450} alt="" className="rounded-2xl object-cover" />
+  <figcaption>Punching holes through it</figcaption>
+</figure>
+
+<div className="mx-auto max-w-xs">
+  <figure>
+    <Image src={diy3} width={400} height={800} alt="" className="rounded-2xl object-cover" />
+    <figcaption>And... tada!</figcaption>
+  </figure>
+</div>
+
+<figure>
+  <Image src={diy4} width={800} height={450} alt="" className="rounded-2xl object-cover" />
+  <figcaption>The result - that's not too bad!</figcaption>
+</figure>
+
+<pre>// TODO: Show video of installation with angles to diffuse bounce lines</pre>
+
+<pre>// TODO: show video of my own clap/snap test</pre>
+
+<pre>// TODO: talk about removing noise (fan, aircon, fridge) inside the room</pre>
+
+<pre>// TODO: recap and wrap-up</pre>
