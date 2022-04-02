@@ -1,7 +1,8 @@
 import Image from 'next/image'
 
 import MarkdownLayout from '/components/markdown-layout.js'
-import CloudinaryVideo from '/components/blocks/cloudinary-video.js'
+import YouTubeVideo from '/components/blocks/youtube-video.js'
+
 import image from './image.jpg'
 import talkingHeadImage from './talking-head-frame.jpg'
 import codeImage from './code-frame.jpg'
@@ -65,7 +66,7 @@ In hope of achieving a smooth transition between the two, it's often tempting to
 
 Let's take a look at the result:
 
-<CloudinaryVideo url="https://player.cloudinary.com/embed/?public_id=v1648504960%2Fbetter-dev%2Ftransitions%2FCross-fade.mp4&cloud_name=simonswiss&player%5Bfluid%5D=true&player%5Bcontrols%5D=true&player%5Bcolors%5D%5Baccent%5D=%230c40ff&player%5Bposter_options%5D%5Btransformation%5D%5Bstart_offset%5D=0&source%5Bsource_types%5D%5B0%5D=mp4" />
+<YouTubeVideo videoId="dwvJnpekT4E" />
 
 That looks decent. But did this really _improve_ the edit?
 
@@ -129,7 +130,7 @@ Because you could hear the plane in the previous scene and gather some context o
 
 Here's an example of that, art directed by yours truly (sound on!):
 
-<CloudinaryVideo url="https://player.cloudinary.com/embed/?public_id=v1648508386%2Fbetter-dev%2Ftransitions%2Fj-cut.mp4&cloud_name=simonswiss&player%5Bfluid%5D=true&player%5Bcontrols%5D=true&player%5Bcolors%5D%5Baccent%5D=%230c40ff&player%5Bposter_options%5D%5Btransformation%5D%5Bstart_offset%5D=5&source%5Bsource_types%5D%5B0%5D=mp4" />
+<YouTubeVideo videoId="gC6lODuCQ6c" />
 
 And here's how I implemented it. The procedure may slightly vary depending on what editing software you're using (I use DaVinci Resolve), but the steps are usually the same:
 
@@ -167,7 +168,7 @@ While the most powerful aspect of `J-cuts` and `L-cuts` is _enhanced storytellin
 
 Take the following on-camera footage. I look down before I finish my sentence, which kinda ruins this clip and makes it hard to use in my video:
 
-<CloudinaryVideo url="https://player.cloudinary.com/embed/?public_id=v1648509467%2Fbetter-dev%2Ftransitions%2Flooking-down.mp4&cloud_name=simonswiss&player%5Bfluid%5D=true&player%5Bcontrols%5D=true&player%5Bcolors%5D%5Baccent%5D=%230c40ff&player%5Bposter_options%5D%5Btransformation%5D%5Bstart_offset%5D=4&source%5Bsource_types%5D%5B0%5D=mp4" />
+<YouTubeVideo videoId="L9xDF0yi-tQ" />
 
 Bummer! Do I set up my lights and camera, and gear up for re-recording, just to fix this small segment?
 
@@ -188,7 +189,7 @@ Oh wait. Perhaps a clever `L-cut` can help us here! Maybe I can switch to the co
 
 Let's take a look at the result:
 
-<CloudinaryVideo url="https://player.cloudinary.com/embed/?public_id=v1648509471%2Fbetter-dev%2Ftransitions%2Fl-cut-fix.mp4&cloud_name=simonswiss&player%5Bfluid%5D=true&player%5Bcontrols%5D=true&player%5Bposter_options%5D%5Btransformation%5D%5Bstart_offset%5D=0&source%5Bsource_types%5D%5B0%5D=mp4" />
+<YouTubeVideo videoId="pr2OnYqwUTk" />
 
 That's actually pretty solid! Cutting to the code scene while talking didn't feel unnatural, because the context of me speaking was already established.
 
@@ -222,14 +223,7 @@ All I'm suggesting is, try and use transition effects to achieve a specific task
 
 Not shaming anyone here, almost everyone does it. Matter of fact, I dug up my very first video on YouTube (from 2006, 15+ years ago), and sure enough, _almost every single transition_ has an effect:
 
-<iframe
-  className="aspect-video w-full"
-  src="https://www.youtube.com/embed/g8j9DIPgk30"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<YouTubeVideo videoId="g8j9DIPgk30" />
 
 I remember absolutely loving the "fade to white" effect. With a short duration, it felt like a camera flash and had this cool vibe to it.
 
