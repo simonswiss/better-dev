@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 
 import '../styles/globals.css'
 import Navigation from '../components/navigation'
@@ -10,6 +11,19 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <div className="flex h-full min-h-screen flex-col">
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-HCBHT8CPYS" />
+      <Script
+        id="gtag"
+        dangerouslySetInnerHTML={{
+          __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HCBHT8CPYS');
+`,
+        }}
+      ></Script>
       <Head>
         <meta key="twitter:site" name="twitter:site" content="@simonswiss" />
         <meta
