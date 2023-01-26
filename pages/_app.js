@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import Script from 'next/script'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import '../styles/globals.css'
 import Navigation from '../components/navigation'
@@ -11,19 +11,6 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <div className="flex h-full min-h-screen flex-col">
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-HCBHT8CPYS" />
-      <Script
-        id="gtag"
-        dangerouslySetInnerHTML={{
-          __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HCBHT8CPYS');
-`,
-        }}
-      ></Script>
       <Head>
         <meta key="twitter:site" name="twitter:site" content="@simonswiss" />
         <meta
@@ -49,6 +36,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/feeds/atom.xml" />
         <link rel="alternate" type="application/json" title="JSON Feed" href="/feeds/feed.json" /> */}
       </Head>
+      <GoogleAnalytics trackPageViews gaMeasurementId="G-HCBHT8CPYS" />
       <Navigation />
       <main className="flex-1">
         <Component {...pageProps} />
