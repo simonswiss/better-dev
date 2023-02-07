@@ -9,4 +9,5 @@ coverImage:
   extension: jpg
   filename: start-now.jpg
 content:
-  files: []
+  files:
+    - mic-order.jpg
