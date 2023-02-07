@@ -20,6 +20,17 @@ const keystaticConfig = config({
         content: fields.document({
           label: 'Post copy',
           componentBlocks: {
+            image: {
+              preview: () => null,
+              label: 'Image',
+              schema: {
+                image: fields.image({ label: 'Image' }),
+                width: fields.integer({ label: 'Width' }),
+                height: fields.integer({ label: 'Height' }),
+                altText: fields.text({ label: 'Alt text' }),
+                classes: fields.text({ label: 'classnames' }),
+              },
+            },
             youtubeVideo: {
               preview: () => null,
               label: 'YouTube video',
