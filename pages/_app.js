@@ -9,6 +9,10 @@ import socialCardLarge from '/public/images/social-large.jpg'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
+
+  if (router.pathname.startsWith('/keystatic')) {
+    return <Component {...pageProps} />
+  }
   return (
     <div className="flex h-full min-h-screen flex-col">
       <Head>

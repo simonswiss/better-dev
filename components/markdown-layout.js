@@ -45,10 +45,8 @@ export default function MarkdownLayout({ meta, children }) {
             <p>Hey, I'm Simon 👋 </p>
 
             <p>
-              <Link href="/">
-                <a className="text-indigo-500 underline hover:text-indigo-700">
-                  Better Dev Screencasts
-                </a>
+              <Link href="/" className="text-indigo-500 underline hover:text-indigo-700">
+                Better Dev Screencasts
               </Link>{' '}
               is a personal project of mine. If you enjoyed this post, please consider sharing it
               with your friends! ❤️
