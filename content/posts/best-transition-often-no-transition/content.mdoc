@@ -1,6 +1,14 @@
 Let's say you're editing a video, and you have these two bits of footage:
 
-Scene A: Talking headScene B: Code editor
+{% layout layout=[1, 1] %}
+{% layout-area %}
+Scene A: Talking head
+{% /layout-area %}
+
+{% layout-area %}
+Scene B: Code editor
+{% /layout-area %}
+{% /layout %}
 
 In hope of achieving a smooth transition between the two, it's often tempting to use one of the transition effects baked in video editing software, like a "cross fade":
 
@@ -18,13 +26,13 @@ Just a raw cut.
 
 > _**Yeah, but... raw cuts are boring, Simon!**_
 
-I know, but hear me out:&nbsp;you can have some fun with raw cuts too! They don't always have to be plain and boring. Let's talk about a simple but extremely powerful cutting technique:&nbsp;`&nbsp;and&nbsp;`.
+I know, but hear me out:&nbsp;you can have some fun with raw cuts too! They don't always have to be plain and boring. Let's talk about a simple but extremely powerful cutting technique:&nbsp;.
 
 ## **J-what and What-cuts?**
 
-The&nbsp;`&nbsp;and&nbsp;`&nbsp;techniques decouple the audio and video cuts between Scene A and Scene B.
+The&nbsp;&nbsp;techniques decouple the audio and video cuts between Scene A and Scene B.
 
-In the case of a&nbsp;`, the audio from Scene B comes in&nbsp;_before_&nbsp;the video from Scene B kicks in. And an&nbsp;`&nbsp;is, well, the opposite.
+In the case of a&nbsp;&nbsp;is, well, the opposite.
 
 Confusing? This will help: these cuts take their name after the way they look in your video editor.
 
@@ -32,7 +40,7 @@ Take a look at this –&nbsp;I've highlighted clips in pink to "reveal" the shap
 
 A J-cutAn L-cut
 
-Makes sense now, right? The pink shapes indeed looks like a&nbsp;`&nbsp;and an&nbsp;`&nbsp;in those screenshots.
+Makes sense now, right? The pink shapes indeed looks like a&nbsp;&nbsp;in those screenshots.
 
 ### **So, what do these achieve?**
 
@@ -53,11 +61,11 @@ And here's how I implemented it. The procedure may slightly vary depending on wh
 1. **"Unlink" the audio and video tracks**, so they can be modified independently from one another.Unlink the audio and video clips
 1. **Move the "split" point**&nbsp;of either the audio or video track to achieve your desired effect.Adjust the clips as you see fit!
 
-Next time you watch a movie, try and spot where&nbsp;`&nbsp;and&nbsp;`&nbsp;are used to make a scene transition much more interesting and evident!
+Next time you watch a movie, try and spot where&nbsp;&nbsp;are used to make a scene transition much more interesting and evident!
 
 ## **But... J-cuts for coding videos? I'm not directing a movie over here!**
 
-While the most powerful aspect of&nbsp;`&nbsp;and&nbsp;`&nbsp;is&nbsp;_enhanced storytelling_, these cuts are also excellent at doing some "repairs" and saving some of your rough scene transitions.
+While the most powerful aspect of&nbsp;&nbsp;is&nbsp;_enhanced storytelling_, these cuts are also excellent at doing some "repairs" and saving some of your rough scene transitions.
 
 Take the following on-camera footage. I look down before I finish my sentence, which kinda ruins this clip and makes it hard to use in my video:
 
@@ -75,7 +83,7 @@ That's actually pretty solid! Cutting to the code scene while talking didn't fee
 
 I'm not really taking any shortcuts, and I didn't need to start a new recording session just for this one clip!
 
-Don't be afraid to experiment with&nbsp;`&nbsp;and&nbsp;`, they're a fantastic tool to add to your editing bag of tricks.
+Don't be afraid to experiment with&nbsp;, they're a fantastic tool to add to your editing bag of tricks.
 
 In the vast majority of scenarios, they will look more polished and professional than if you had used a transition effect like a cross fade.
 
