@@ -4,6 +4,8 @@ import { createReader } from 'keystatic/reader'
 import { DocumentRenderer } from 'keystatic/renderer'
 import keystaticConfig from 'keystatic.config'
 
+import { TwitterTweetEmbed } from 'react-twitter-embed'
+
 import MarkdownLayout from 'components/markdown-layout'
 
 export default function NewPost({ post }) {
@@ -13,7 +15,7 @@ export default function NewPost({ post }) {
         date: post.date,
         title: post.title,
         excerpt: post.excerpt,
-        image: post.coverImage,
+        // image: post.coverImage,
       }}
     >
       <DocumentRenderer
@@ -22,13 +24,16 @@ export default function NewPost({ post }) {
           image: (props) => (
             <figure>
               <Image
-                src={props.image}
+                src={props.image.filename}
                 width={props.width}
                 height={props.height}
                 alt={props.altText}
                 className={props.classes}
               />
             </figure>
+          ),
+          tweet: (props) => (
+            <TwitterTweetEmbed tweetId={props.id} options={{ conversation: 'none' }} />
           ),
         }}
       />
@@ -52,14 +57,14 @@ export async function getStaticProps({ params }) {
   const content = await postData.content()
   const coverImage = await postData.coverImage()
 
-  console.log({ content, coverImage })
+  console.dir({ content }, { depth: null })
 
   return {
     props: {
       post: {
         ...postData,
         content,
-        coverImage: coverImage.filename,
+        coverImage: 'https://placehold.it/800/400',
       },
     },
   }

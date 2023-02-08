@@ -38,6 +38,13 @@ const keystaticConfig = config({
                 videoId: fields.text({ label: 'Video ID' }),
               },
             },
+            tweet: {
+              preview: () => null,
+              label: 'Tweet',
+              schema: {
+                tweetId: fields.text({ label: 'Tweet ID' }),
+              },
+            },
           },
         }),
       },
