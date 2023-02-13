@@ -78,7 +78,7 @@ function Metadata({ meta }) {
 
   return (
     <Head>
-      <title>{meta.title} | Better Dev Screencasts</title>
+      <title>{`${meta.title} | Better Dev Screencasts`}</title>
       <meta name="twitter:site" content="@simonswiss" key="twitter:site" />
       <meta name="twitter:creator" content="@simonswiss" key="twitter:creator" />
       <meta
