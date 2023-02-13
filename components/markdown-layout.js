@@ -76,8 +76,6 @@ export default function MarkdownLayout({ meta, children }) {
 function Metadata({ meta }) {
   let router = useRouter()
 
-  console.log({ router })
-
   return (
     <Head>
       <title>{meta.title} | Better Dev Screencasts</title>
