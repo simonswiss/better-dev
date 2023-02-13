@@ -7,4 +7,6 @@ excerpt: >-
   "cross-fade". Let's challenge that!
 coverImage: coverImage.jpg
 content:
-  files: []
+  files:
+    - talking-head-frame.jpg
+    - code-frame.jpg

@@ -2,11 +2,16 @@ Let's say you're editing a video, and you have these two bits of footage:
 
 {% layout layout=[1, 1] %}
 {% layout-area %}
-Scene A: Talking head
+{% image
+   image="talking-head-frame.jpg"
+   width=0
+   height=0
+   altText=""
+   classes="" /%}
 {% /layout-area %}
 
 {% layout-area %}
-Scene B: Code editor
+{% image image="code-frame.jpg" width=0 height=0 altText="" classes="" /%}
 {% /layout-area %}
 {% /layout %}
 
