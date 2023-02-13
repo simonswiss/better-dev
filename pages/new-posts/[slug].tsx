@@ -34,14 +34,19 @@ export default function NewPost({ post }) {
           },
         }}
         componentBlocks={{
+          // TODO: Implement the image rendering correctly
           image: (props) => (
             <figure>
               <Image
-                src={props.image.filename}
-                width={props.width}
-                height={props.height}
+                // src={props.image}
+                src="https://placekitten.com/600/400"
+                // width={props.width}
+                width={640}
+                // height={props.height}
+                height={480}
                 alt={props.altText}
-                className={props.zclasses}
+                // className={props.classes}
+                className="rounded-2xl shadow-lg"
               />
             </figure>
           ),

@@ -76,6 +76,8 @@ export default function MarkdownLayout({ meta, children }) {
 function Metadata({ meta }) {
   let router = useRouter()
 
+  console.log({ router })
+
   return (
     <Head>
       <title>{meta.title} | Better Dev Screencasts</title>
@@ -108,7 +110,7 @@ function Metadata({ meta }) {
       )}
       <meta
         property="og:url"
-        content={`https://betterdevscreencasts.com${router.pathname}`}
+        content={`https://betterdevscreencasts.com${router.asPath}`}
         key="og:url"
       />
       <meta property="og:type" content="article" key="og:type" />
