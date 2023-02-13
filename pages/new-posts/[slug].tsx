@@ -6,7 +6,8 @@ import keystaticConfig from 'keystatic.config'
 
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 
-import MarkdownLayout from 'components/markdown-layout'
+import MarkdownLayout from '@components/markdown-layout'
+import YouTubeVideo from '@components/blocks/youtube-video'
 
 export default function NewPost({ post }) {
   return (
@@ -20,6 +21,18 @@ export default function NewPost({ post }) {
     >
       <DocumentRenderer
         document={post.content}
+        renderers={{
+          block: {
+            layout: (props) => {
+              switch (props.layout.join(',')) {
+                case '1,1':
+                  return <div className="grid grid-cols-2 gap-8">{props.children}</div>
+                case '1,1,1':
+                  return <div className="grid grid-cols-3 gap-4">{props.children}</div>
+              }
+            },
+          },
+        }}
         componentBlocks={{
           image: (props) => (
             <figure>
@@ -28,13 +41,14 @@ export default function NewPost({ post }) {
                 width={props.width}
                 height={props.height}
                 alt={props.altText}
-                className={props.classes}
+                className={props.zclasses}
               />
             </figure>
           ),
           tweet: (props) => (
-            <TwitterTweetEmbed tweetId={props.id} options={{ conversation: 'none' }} />
+            <TwitterTweetEmbed tweetId={props.tweetId} options={{ conversation: 'none' }} />
           ),
+          youtubeVideo: (props) => <YouTubeVideo videoId={props.videoId} />,
         }}
       />
     </MarkdownLayout>
@@ -55,9 +69,6 @@ export async function getStaticProps({ params }) {
   const reader = createReader('', keystaticConfig)
   const postData = await reader.collections.posts.read(slug)
   const content = await postData.content()
-  const coverImage = await postData.coverImage()
-
-  console.dir({ content }, { depth: null })
 
   return {
     props: {

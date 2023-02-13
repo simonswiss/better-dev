@@ -1,16 +1,19 @@
-import { config, fields } from 'keystatic'
+import { config, fields, collection, component } from 'keystatic'
 
 const keystaticConfig = config({
-  repo: {
-    name: 'better-dev',
-    owner: 'simonswiss',
+  storage: {
+    kind: 'github',
+    repo: {
+      name: 'better-dev',
+      owner: 'simonswiss',
+    },
   },
   collections: {
     posts: {
-      label: 'Posts',
-      itemLabel: (props) => props.title,
-      directory: 'content/posts',
       getItemSlug: (data) => data.slug,
+      itemLabel: (props) => props.title,
+      label: 'Posts',
+      directory: 'content/posts',
       schema: {
         title: fields.text({ label: 'Title' }),
         slug: fields.text({ label: 'Slug', validation: { length: { min: 4 } } }),
