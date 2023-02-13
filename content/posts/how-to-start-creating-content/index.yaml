@@ -5,8 +5,6 @@ excerpt: >-
   Feeling stuck in a procrastination loop? Want to start creating content but
   keep coming up with excuses to justify waiting a little longer? Let's snap out
   of this situation!
-coverImage:
-  extension: jpg
-  filename: start-now.jpg
+coverImage: coverImage.jpg
 content:
   files: []
