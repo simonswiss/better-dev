@@ -11,7 +11,6 @@ const keystaticConfig = config({
   collections: {
     posts: collection({
       getItemSlug: (data) => data.slug,
-      itemLabel: (props) => props.title,
       label: 'Posts',
       directory: 'public/content/posts',
       schema: {
