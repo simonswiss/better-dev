@@ -49,6 +49,13 @@ const keystaticConfig = config({
                 tweetId: fields.text({ label: 'Tweet ID' }),
               },
             }),
+            iframe: component({
+              preview: () => null,
+              label: 'iframe',
+              schema: {
+                code: fields.text({ label: 'Code' }),
+              },
+            }),
           },
         }),
       },

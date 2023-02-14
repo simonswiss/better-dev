@@ -57,6 +57,7 @@ export default function NewPost({ post }) {
             <TwitterTweetEmbed tweetId={props.tweetId} options={{ conversation: 'none' }} />
           ),
           youtubeVideo: (props) => <YouTubeVideo videoId={props.videoId} />,
+          iframe: (props) => <div dangerouslySetInnerHTML={{ __html: props.code }} />,
         }}
       />
     </MarkdownLayout>
