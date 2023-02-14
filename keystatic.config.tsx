@@ -9,11 +9,11 @@ const keystaticConfig = config({
     },
   },
   collections: {
-    posts: {
+    posts: collection({
       getItemSlug: (data) => data.slug,
       itemLabel: (props) => props.title,
       label: 'Posts',
-      directory: 'content/posts',
+      directory: 'public/content/posts',
       schema: {
         title: fields.text({ label: 'Title' }),
         slug: fields.text({ label: 'Slug', validation: { length: { min: 4 } } }),
@@ -23,7 +23,7 @@ const keystaticConfig = config({
         content: fields.document({
           label: 'Post copy',
           componentBlocks: {
-            image: {
+            image: component({
               preview: () => null,
               label: 'Image',
               schema: {
@@ -33,25 +33,25 @@ const keystaticConfig = config({
                 altText: fields.text({ label: 'Alt text' }),
                 classes: fields.text({ label: 'classnames' }),
               },
-            },
-            youtubeVideo: {
+            }),
+            youtubeVideo: component({
               preview: () => null,
               label: 'YouTube video',
               schema: {
                 videoId: fields.text({ label: 'Video ID' }),
               },
-            },
-            tweet: {
+            }),
+            tweet: component({
               preview: () => null,
               label: 'Tweet',
               schema: {
                 tweetId: fields.text({ label: 'Tweet ID' }),
               },
-            },
+            }),
           },
         }),
       },
-    },
+    }),
   },
 })
 
