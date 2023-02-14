@@ -32,6 +32,7 @@ const keystaticConfig = config({
                 height: fields.integer({ label: 'Height' }),
                 altText: fields.text({ label: 'Alt text' }),
                 classes: fields.text({ label: 'classnames' }),
+                caption: fields.text({ label: 'Caption' }),
               },
             }),
             youtubeVideo: component({
