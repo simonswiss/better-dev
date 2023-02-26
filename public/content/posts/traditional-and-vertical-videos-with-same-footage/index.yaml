@@ -6,4 +6,5 @@ excerpt: >-
   years ago… making videos now requires the same responsive design thinking.
 coverImage: coverImage.png
 content:
-  files: []
+  files:
+    - video-script.png
