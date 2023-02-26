@@ -46,9 +46,7 @@ export default function NewPost({ post }) {
                   width={props.width || 640}
                   height={props.height || 480}
                   alt={props.altText}
-                  className={
-                    props.classes || 'block max-h-[50vh] object-cover rounded-2xl shadow-lg'
-                  }
+                  className={props.classes || 'max-h-[800px] w-auto shadow-lg rounded-lg'}
                 />
 
                 {props.caption && (
