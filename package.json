@@ -11,8 +11,6 @@
   "dependencies": {
     "@keystatic/core": "^0.0.47",
     "@keystatic/next": "^0.0.4",
-    "@mdx-js/loader": "^2.1.0",
-    "@next/mdx": "^13.1.6",
     "date-fns": "^2.28.0",
     "feed": "^4.2.2",
     "file-loader": "^6.2.0",
