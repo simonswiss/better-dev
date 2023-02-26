@@ -27,7 +27,6 @@ export default function NewPost({ post }) {
         renderers={{
           block: {
             layout: (props) => {
-              console.log({ props })
               switch (props.layout.join(',')) {
                 case '1,1':
                   return <div className="grid gap-4 sm:grid-cols-2">{props.children}</div>
