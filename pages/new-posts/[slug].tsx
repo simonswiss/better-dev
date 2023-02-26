@@ -31,7 +31,7 @@ export default function NewPost({ post }) {
                 case '1,1':
                   return <div className="grid gap-4 sm:grid-cols-2">{props.children}</div>
                 default:
-                  return props.children
+                  return <>{props.children}</>
               }
             },
           },
