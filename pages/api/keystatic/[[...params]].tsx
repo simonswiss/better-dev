@@ -1,15 +1,4 @@
-import createKeystaticAPIRoute from 'keystatic/api'
+import { makeAPIRouteHandler } from '@keystatic/next/api'
+import config from '../../../keystatic.config'
 
-function requiredEnv(name: string, val: string | undefined): string {
-  if (!val) {
-    throw new Error(`Missing required environment variable: ${name}`)
-  }
-  return val
-}
-
-export default createKeystaticAPIRoute({
-  secret: requiredEnv('KEYSTATIC_SECRET', process.env.KEYSTATIC_SECRET),
-  clientId: requiredEnv('GITHUB_CLIENT_ID', process.env.GITHUB_CLIENT_ID),
-  clientSecret: requiredEnv('GITHUB_CLIENT_SECRET', process.env.GITHUB_CLIENT_SECRET),
-  url: requiredEnv('AUTH_URL', process.env.AUTH_URL),
-})
+export default makeAPIRouteHandler({ config })

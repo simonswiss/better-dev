@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import { createReader } from 'keystatic/reader'
-import { DocumentRenderer } from 'keystatic/renderer'
+import { createReader } from '@keystatic/core/reader'
+import { DocumentRenderer } from '@keystatic/core/renderer'
 import keystaticConfig from 'keystatic.config'
 
 import { TwitterTweetEmbed } from 'react-twitter-embed'
@@ -27,17 +27,17 @@ export default function NewPost({ post }) {
         renderers={{
           block: {
             layout: (props) => {
+              console.log({ props })
               switch (props.layout.join(',')) {
                 case '1,1':
                   return <div className="grid gap-4 sm:grid-cols-2">{props.children}</div>
-                case '1,1,1':
-                  return <div className="grid gap-4 sm:grid-cols-3">{props.children}</div>
+                default:
+                  return props.children
               }
             },
           },
         }}
         componentBlocks={{
-          // TODO: Implement the image rendering correctly
           image: (props) => {
             return (
               <figure>
@@ -46,10 +46,17 @@ export default function NewPost({ post }) {
                   width={props.width || 640}
                   height={props.height || 480}
                   alt={props.altText}
-                  className={props.classes || 'block rounded-2xl object-cover shadow-lg'}
+                  className={
+                    props.classes || 'block max-h-[50vh] object-cover rounded-2xl shadow-lg'
+                  }
                 />
 
-                {props.caption && <figcaption className="!mt-3">{props.caption}</figcaption>}
+                {props.caption && (
+                  <figcaption
+                    className="!mt-3"
+                    dangerouslySetInnerHTML={{ __html: props.caption }}
+                  />
+                )}
               </figure>
             )
           },
@@ -77,7 +84,7 @@ export async function getStaticProps({ params }) {
   const { slug } = params
   const reader = createReader('', keystaticConfig)
   const postData = await reader.collections.posts.read(slug)
-  const content = await postData.content()
+  const content = await postData?.content()
 
   return {
     props: {

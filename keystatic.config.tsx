@@ -1,4 +1,4 @@
-import { config, fields, collection, component } from 'keystatic'
+import { config, fields, collection, component } from '@keystatic/core'
 
 const keystaticConfig = config({
   storage: {
@@ -10,9 +10,9 @@ const keystaticConfig = config({
   },
   collections: {
     posts: collection({
-      getItemSlug: (data) => data.slug,
       label: 'Posts',
       directory: 'public/content/posts',
+      slugField: 'slug',
       schema: {
         title: fields.text({ label: 'Title' }),
         slug: fields.text({ label: 'Slug', validation: { length: { min: 4 } } }),
@@ -21,6 +21,10 @@ const keystaticConfig = config({
         coverImage: fields.image({ label: 'Cover image' }),
         content: fields.document({
           label: 'Post copy',
+          layouts: [[1, 1]],
+          formatting: true,
+          dividers: true,
+          links: true,
           componentBlocks: {
             image: component({
               preview: () => null,
