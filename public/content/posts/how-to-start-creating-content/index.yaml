@@ -7,4 +7,5 @@ excerpt: >-
   of this situation!
 coverImage: coverImage.jpg
 content:
-  files: []
+  files:
+    - mic-order.jpg
