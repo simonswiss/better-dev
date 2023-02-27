@@ -45,10 +45,8 @@ export default function MarkdownLayout({ meta, children }) {
             <p>Hey, I'm Simon 👋 </p>
 
             <p>
-              <Link href="/">
-                <a className="text-indigo-500 underline hover:text-indigo-700">
-                  Better Dev Screencasts
-                </a>
+              <Link href="/" className="text-indigo-500 underline hover:text-indigo-700">
+                Better Dev Screencasts
               </Link>{' '}
               is a personal project of mine. If you enjoyed this post, please consider sharing it
               with your friends! ❤️
@@ -80,7 +78,7 @@ function Metadata({ meta }) {
 
   return (
     <Head>
-      <title>{meta.title} | Better Dev Screencasts</title>
+      <title>{`${meta.title} | Better Dev Screencasts`}</title>
       <meta name="twitter:site" content="@simonswiss" key="twitter:site" />
       <meta name="twitter:creator" content="@simonswiss" key="twitter:creator" />
       <meta
@@ -110,7 +108,7 @@ function Metadata({ meta }) {
       )}
       <meta
         property="og:url"
-        content={`https://betterdevscreencasts.com${router.pathname}`}
+        content={`https://betterdevscreencasts.com${router.asPath}`}
         key="og:url"
       />
       <meta property="og:type" content="article" key="og:type" />

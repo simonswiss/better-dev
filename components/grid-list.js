@@ -19,28 +19,27 @@ export default function Grid({ data }) {
     <div className="mx-auto mt-12 grid max-w-7xl gap-x-8 gap-y-12 px-4 sm:px-6 md:mt-16 lg:mt-24 lg:grid-cols-2 lg:gap-y-16 lg:px-8 2xl:max-w-8xl 2xl:grid-cols-3">
       {data.map((item) => (
         <div className="relative" key={item.slug}>
-          <Link href={`/posts/${item.slug}`}>
-            <a className="hover:opacity-80">
-              <Image
-                className="aspect-video rounded-md object-cover shadow-lg"
-                src={item.module.meta?.image || '/images/social-large.jpg'}
-                alt=""
-                width={800}
-                height={450}
-              />
-            </a>
+          <Link href={`/posts/${item.slug}`} className="hover:opacity-80">
+            <Image
+              className="aspect-video rounded-md object-cover shadow-lg"
+              src={item.module.meta?.image || '/images/social-large.jpg'}
+              alt=""
+              width={800}
+              height={450}
+            />
           </Link>
 
           <h2 className="mt-4 text-lg font-semibold">
-            <Link href={`/posts/${item.slug}`}>
-              <a className="hover:underline">{item.module.meta.title}</a>
+            <Link href={`/posts/${item.slug}`} className="hover:underline">
+              {item.module.meta.title}
             </Link>
           </h2>
           <p className="mt-2 text-slate-700">{item.module.meta.excerpt}</p>
-          <Link href={`/posts/${item.slug}`}>
-            <a className="mt-4 block font-medium text-indigo-500 hover:underline">
-              Read more &rarr;
-            </a>
+          <Link
+            href={`/posts/${item.slug}`}
+            className="mt-4 block font-medium text-indigo-500 hover:underline"
+          >
+            Read more &rarr;
           </Link>
         </div>
       ))}
