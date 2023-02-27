@@ -52,13 +52,13 @@ export default function NewPosts({ posts }) {
                 </Link>
 
                 <h2 className="mt-4 text-lg font-semibold">
-                  <Link href={`/new-posts/${post.slug}`} className="hover:underline">
+                  <Link href={`/posts/${post.slug}`} className="hover:underline">
                     {post.title}
                   </Link>
                 </h2>
                 <p className="mt-2 text-slate-700">{post.excerpt}</p>
                 <Link
-                  href={`/new-posts/${post.slug}`}
+                  href={`/posts/${post.slug}`}
                   className="mt-4 block font-medium text-indigo-500 hover:underline"
                 >
                   Read more &rarr;
