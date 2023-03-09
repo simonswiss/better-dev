@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@keystatic/core': ^0.0.60
+  '@keystatic/core': ^0.0.62
   '@keystatic/next': ^0.0.4
   '@tailwindcss/forms': ^0.5.0
   '@tailwindcss/typography': ^0.5.2
@@ -25,8 +25,8 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
-  '@keystatic/core': 0.0.60_biqbaboplfbrettd7655fr4n2y
-  '@keystatic/next': 0.0.4_zqtbskxbncqp6zgtmqbxqpnmv4
+  '@keystatic/core': 0.0.62_biqbaboplfbrettd7655fr4n2y
+  '@keystatic/next': 0.0.4_mcei2i4qqbkppo4orrn2huy2wq
   date-fns: 2.29.3
   feed: 4.2.2
   file-loader: 6.2.0
@@ -342,8 +342,8 @@ packages:
       '@sinclair/typebox': 0.25.24
     dev: false
 
-  /@keystatic/core/0.0.60_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-ybxsvj1zDIOFrKl4Hj5CZzGeeZ8ynjpWfISL76cZ2nY0MZMYZ9WJ8gNLqqIaMVVzEslaal7Xxb/0jfO7QFb3Qg==}
+  /@keystatic/core/0.0.62_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-GiQNECBio+cOaSZwBRfXJYaFYZ2SzMwryIkFZyNP8Rlt6Ho8dP2ct5x8Ek9h/eoFVQcZh6WFVhRxFHDew0ZXvg==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -437,7 +437,7 @@ packages:
       - supports-color
     dev: false
 
-  /@keystatic/next/0.0.4_zqtbskxbncqp6zgtmqbxqpnmv4:
+  /@keystatic/next/0.0.4_mcei2i4qqbkppo4orrn2huy2wq:
     resolution: {integrity: sha512-ZET1vEl0P6k3O/Fxvr+idqKbxqwNPadQmBCabR5/8D7KQPZScRCERglhIz17wjO/SWEiNh+jLfvZVhNqxMYz/Q==}
     peerDependencies:
       '@keystatic/core': '*'
@@ -446,7 +446,7 @@ packages:
       react-dom: ^18.2.0
     dependencies:
       '@babel/runtime': 7.21.0
-      '@keystatic/core': 0.0.60_biqbaboplfbrettd7655fr4n2y
+      '@keystatic/core': 0.0.62_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.28
       next: 13.2.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
