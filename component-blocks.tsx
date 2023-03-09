@@ -18,7 +18,11 @@ const componentBlocks = {
   image: component({
     preview: (props) => (
       <BoxWrapper>
-        <ImagePreview data={props.fields.image.value.data} />
+        {props.fields.image.value.kind === 'uploaded' ? (
+          <ImagePreview data={props.fields.image.value.data} />
+        ) : (
+          'loading...'
+        )}
       </BoxWrapper>
     ),
     label: 'Image',
