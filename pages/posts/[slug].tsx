@@ -10,7 +10,7 @@ import MarkdownLayout from '@components/markdown-layout'
 import YouTubeVideo from '@components/blocks/youtube-video'
 
 export default function NewPost({ post }) {
-  const imageSrc = `/content/posts/${post.slug}/${post.coverImage}`
+  const seoImage = `/images/posts/${post.slug}/${post.coverImage}`
   return (
     <MarkdownLayout
       meta={{
@@ -18,7 +18,7 @@ export default function NewPost({ post }) {
         title: post.title,
         excerpt: post.excerpt,
         image: {
-          src: imageSrc,
+          src: seoImage,
         },
       }}
     >
@@ -37,11 +37,11 @@ export default function NewPost({ post }) {
           },
         }}
         componentBlocks={{
-          image: (props) => {
+          imagexx: (props) => {
             return (
               <figure>
                 <Image
-                  src={`/content/posts/${post.slug}/content/${props.image}`}
+                  src={`/images/posts/${post.slug}/${props.image}`}
                   width={props.width || 640}
                   height={props.height || 480}
                   alt={props.altText}
@@ -87,6 +87,7 @@ export async function getStaticProps({ params }) {
     props: {
       post: {
         ...postData,
+        slug,
         content,
       },
     },
