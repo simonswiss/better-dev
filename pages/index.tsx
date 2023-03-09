@@ -36,15 +36,15 @@ export default function NewPosts({ posts }) {
       ) : (
         <div className="mx-auto mt-12 grid max-w-7xl gap-x-8 gap-y-12 px-4 sm:px-6 md:mt-16 lg:mt-24 lg:grid-cols-2 lg:gap-y-16 lg:px-8 2xl:max-w-8xl 2xl:grid-cols-3">
           {posts.map((post) => {
-            const image = post.coverImage
-              ? `/content/posts/${post.slug}/${post.coverImage}`
+            const imageSrc = post.coverImage
+              ? `/images/posts/${post.slug}/${post.coverImage}`
               : seoImage.src
             return (
               <div className="relative" key={post.slug}>
                 <Link href={`/posts/${post.slug}`} className="hover:opacity-80">
                   <Image
                     className="aspect-video rounded-md object-cover shadow-lg"
-                    src={`/content/posts/${post.slug}/${post.coverImage}`}
+                    src={imageSrc}
                     alt=""
                     width={800}
                     height={450}
@@ -73,7 +73,7 @@ export default function NewPosts({ posts }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const reader = createReader('', keystaticConfig)
   const postsList = await reader.collections.posts.list()
   const posts = await Promise.all(
@@ -82,7 +82,7 @@ export async function getStaticProps(context) {
 
       return {
         title: post?.title,
-        slug: post?.slug,
+        slug,
         date: post?.date,
         excerpt: post?.excerpt,
         coverImage: post?.coverImage,

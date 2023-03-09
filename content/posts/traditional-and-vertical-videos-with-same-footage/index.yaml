@@ -1,9 +1,29 @@
 title: Produce traditional and vertical videos with the same footage!
-slug: traditional-and-vertical-videos-with-same-footage
 date: '2023-01-25'
 excerpt: >-
   Just like web design went through a “responsive design” transformation many
   years ago… making videos now requires the same responsive design thinking.
 coverImage: coverImage.png
 content:
-  files: []
+  files:
+    - video-script.png
+    - 2019-advice.png
+    - 2019-advice-2.png
+    - landscape-and-portrait.png
+    - sass-cropping.png
+    - landscape-layout.png
+    - zoom-down.png
+    - reposition.png
+    - narrow-code.png
+    - narrow-code-and-output.png
+    - multi-ratio-recordings.png
+    - zoom.png
+    - with-face.png
+    - square-windows.png
+    - maths.png
+    - square-windows.png
+    - 50-50-split.png
+    - adjusted-split.png
+    - full-face.png
+    - mask-overlay.png
+    - text-animation.png

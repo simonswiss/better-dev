@@ -1,5 +1,4 @@
 title: The Best Video Transition Is Often... No Transition
-slug: best-transition-often-no-transition
 date: '2022-03-28'
 excerpt: >-
   When cutting from Scene A to Scene B, it's often tempting to use one of the
@@ -10,3 +9,9 @@ content:
   files:
     - talking-head-frame.jpg
     - code-frame.jpg
+    - cross-dissolve.jpg
+    - j-cut.jpg
+    - l-cut.jpg
+    - j-cut-unlink.jpg
+    - j-cut-example.jpg
+    - l-cut-example.jpg
