@@ -4,7 +4,7 @@ module.exports = {
   experimental: {
     appDir: true,
   },
-  // reactStrictMode: true,
+  reactStrictMode: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     domains: ['placehold.it', 'placekitten.com', 'github.com'],
