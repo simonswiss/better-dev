@@ -5,7 +5,11 @@ const componentBlocks = {
     preview: () => null,
     label: 'Image',
     schema: {
-      image: fields.image({ label: 'Image', validation: { isRequired: true } }),
+      image: fields.image({
+        label: 'Image',
+        validation: { isRequired: true },
+        directory: 'public/images/posts',
+      }),
       width: fields.integer({ label: 'Width', defaultValue: 640 }),
       height: fields.integer({ label: 'Height', defaultValue: 480 }),
       altText: fields.text({ label: 'Alt text' }),
