@@ -29,7 +29,11 @@ const componentBlocks = {
     preview: (props) => null,
     label: 'Image XX',
     schema: {
-      image: fields.image({ label: 'Image', directory: 'public/images/posts' }),
+      image: fields.image({
+        label: 'Image',
+        directory: 'public/images/posts',
+        validation: { isRequired: true },
+      }),
       width: fields.integer({ label: 'Width' }),
       height: fields.integer({ label: 'Height' }),
       altText: fields.text({ label: 'Alt text' }),

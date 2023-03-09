@@ -4,7 +4,7 @@ import keystaticConfig from '../../../keystatic.config'
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: false,
+      sizeLimit: '20mb',
     },
     responseLimit: false,
   },

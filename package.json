@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@keystatic/core": "^0.0.62",
+    "@keystatic/core": "^0.0.63",
     "@keystatic/next": "^0.0.4",
     "date-fns": "^2.28.0",
     "feed": "^4.2.2",

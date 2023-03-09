@@ -12,8 +12,8 @@ const keystaticConfig = config({
       path: 'content/posts/*/',
       slugField: 'title',
       schema: {
-        title: fields.slug({ name: { label: 'Title' } }),
-        date: fields.text({ label: 'Date' }),
+        title: fields.slug({ name: { label: 'Title', validation: { length: { min: 2 } } } }),
+        date: fields.date({ label: 'Date', validation: { isRequired: true } }),
         excerpt: fields.text({ label: 'Excerpt' }),
         coverImage: fields.image({ label: 'Cover image', directory: 'public/images/posts' }),
         content: fields.document({
