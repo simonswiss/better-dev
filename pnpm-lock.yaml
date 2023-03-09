@@ -6,6 +6,7 @@ specifiers:
   '@tailwindcss/forms': ^0.5.0
   '@tailwindcss/typography': ^0.5.2
   '@voussoir/layout': ^0.1.0
+  '@voussoir/progress': ^0.1.0
   autoprefixer: ^10.4.4
   date-fns: ^2.28.0
   eslint: ^8.35.0
@@ -29,6 +30,7 @@ dependencies:
   '@keystatic/core': 0.0.63_biqbaboplfbrettd7655fr4n2y
   '@keystatic/next': 0.0.4_cajb22szplwq5nh7zzv3r2qzwm
   '@voussoir/layout': 0.1.0_biqbaboplfbrettd7655fr4n2y
+  '@voussoir/progress': 0.1.0_biqbaboplfbrettd7655fr4n2y
   date-fns: 2.29.3
   feed: 4.2.2
   file-loader: 6.2.0

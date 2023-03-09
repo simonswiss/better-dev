@@ -1,6 +1,7 @@
 import { fields, component } from '@keystatic/core'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
-import { Box, BoxProps } from '@voussoir/layout'
+import { Box, Flex, BoxProps } from '@voussoir/layout'
+import { ProgressCircle } from '@voussoir/progress'
 
 import YouTubeVideo from './components/blocks/youtube-video'
 import useObjectURL from './use-object-url'
@@ -21,7 +22,9 @@ const componentBlocks = {
         {props.fields.image.value.kind === 'uploaded' ? (
           <ImagePreview data={props.fields.image.value.data} />
         ) : (
-          'loading...'
+          <Flex direction="column" gap="medium" alignItems="center">
+            <ProgressCircle aria-label="Loading…" isIndeterminate />
+          </Flex>
         )}
       </BoxWrapper>
     ),
