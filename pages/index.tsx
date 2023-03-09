@@ -37,7 +37,7 @@ export default function NewPosts({ posts }) {
         <div className="mx-auto mt-12 grid max-w-7xl gap-x-8 gap-y-12 px-4 sm:px-6 md:mt-16 lg:mt-24 lg:grid-cols-2 lg:gap-y-16 lg:px-8 2xl:max-w-8xl 2xl:grid-cols-3">
           {posts.map((post) => {
             const image = post.coverImage
-              ? `/content/posts/${post.slug}/${post.coverImage}`
+              ? `/images/posts/${post.slug}/${post.coverImage}`
               : seoImage.src
             return (
               <div className="relative" key={post.slug}>
@@ -82,7 +82,7 @@ export async function getStaticProps(context) {
 
       return {
         title: post?.title,
-        slug: post?.slug,
+        slug,
         date: post?.date,
         excerpt: post?.excerpt,
         coverImage: post?.coverImage,
