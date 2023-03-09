@@ -1,8 +1,26 @@
 import { fields, component } from '@keystatic/core'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
+import { Box, BoxProps } from '@voussoir/layout'
+
+import YouTubeVideo from './components/blocks/youtube-video'
+import useObjectURL from './use-object-url'
+
+function ImagePreview({ data }: { data: Uint8Array } & BoxProps) {
+  const url = useObjectURL(data)
+  return <img style={{ width: '100%', display: 'block' }} src={url} alt="" />
+}
+
+function BoxWrapper(props) {
+  return <Box maxWidth={480} border="neutral" borderRadius="regular" padding="regular" {...props} />
+}
 
 const componentBlocks = {
   image: component({
-    preview: () => null,
+    preview: (props) => (
+      <BoxWrapper>
+        <ImagePreview data={props.fields.image.value.data} />
+      </BoxWrapper>
+    ),
     label: 'Image',
     schema: {
       image: fields.image({
@@ -18,21 +36,34 @@ const componentBlocks = {
     },
   }),
   youtubeVideo: component({
-    preview: () => null,
+    preview: (props) => (
+      <BoxWrapper maxWidth={600}>
+        <YouTubeVideo videoId={props.fields.videoId.value} />
+      </BoxWrapper>
+    ),
     label: 'YouTube video',
     schema: {
       videoId: fields.text({ label: 'Video ID' }),
     },
   }),
   tweet: component({
-    preview: () => null,
+    preview: (props) => (
+      <TwitterTweetEmbed tweetId={props.fields.tweetId.value} options={{ conversation: 'none' }} />
+    ),
     label: 'Tweet',
     schema: {
       tweetId: fields.text({ label: 'Tweet ID' }),
     },
   }),
   iframe: component({
-    preview: () => null,
+    preview: (props) => (
+      <BoxWrapper>
+        <div
+          style={{ width: '100%' }}
+          dangerouslySetInnerHTML={{ __html: props.fields.code.value }}
+        />
+      </BoxWrapper>
+    ),
     label: 'iframe',
     schema: {
       code: fields.text({ label: 'Code' }),

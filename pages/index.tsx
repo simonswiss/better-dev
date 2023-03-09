@@ -43,7 +43,7 @@ export default function NewPosts({ posts }) {
               <div className="relative" key={post.slug}>
                 <Link href={`/posts/${post.slug}`} className="hover:opacity-80">
                   <Image
-                    className="aspect-video rounded-md object-cover shadow-lg"
+                    className="aspect-[4/3] rounded-md object-cover shadow-lg"
                     src={imageSrc}
                     alt=""
                     width={800}
