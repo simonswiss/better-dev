@@ -1,39 +1,18 @@
 import { fields, component } from '@keystatic/core'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
-import { Box, Flex, BoxProps } from '@voussoir/layout'
-import { ProgressCircle } from '@voussoir/progress'
 
 import YouTubeVideo from './components/blocks/youtube-video'
-import useObjectURL from './use-object-url'
-
-function ImagePreview({ data }: { data: Uint8Array } & BoxProps) {
-  const url = useObjectURL(data)
-  return <img style={{ width: '100%', display: 'block' }} src={url} alt="" />
-}
-
-function BoxWrapper(props) {
-  return <Box maxWidth={480} border="neutral" borderRadius="regular" padding="regular" {...props} />
-}
 
 const componentBlocks = {
   image: component({
-    preview: (props) => (
-      <BoxWrapper>
-        {props.fields.image.value.kind === 'uploaded' ? (
-          <ImagePreview data={props.fields.image.value.data} />
-        ) : (
-          <Flex direction="column" gap="medium" alignItems="center">
-            <ProgressCircle aria-label="Loading…" isIndeterminate />
-          </Flex>
-        )}
-      </BoxWrapper>
-    ),
+    preview: () => null,
     label: 'Image',
     schema: {
       image: fields.image({
         label: 'Image',
         validation: { isRequired: true },
         directory: 'public/images/posts',
+        publicPath: 'images/posts/',
       }),
       width: fields.integer({ label: 'Width', defaultValue: 640 }),
       height: fields.integer({ label: 'Height', defaultValue: 480 }),
@@ -43,11 +22,7 @@ const componentBlocks = {
     },
   }),
   youtubeVideo: component({
-    preview: (props) => (
-      <BoxWrapper maxWidth={600}>
-        <YouTubeVideo videoId={props.fields.videoId.value} />
-      </BoxWrapper>
-    ),
+    preview: (props) => <YouTubeVideo videoId={props.fields.videoId.value} />,
     label: 'YouTube video',
     schema: {
       videoId: fields.text({ label: 'Video ID' }),
@@ -64,12 +39,10 @@ const componentBlocks = {
   }),
   iframe: component({
     preview: (props) => (
-      <BoxWrapper>
-        <div
-          style={{ width: '100%' }}
-          dangerouslySetInnerHTML={{ __html: props.fields.code.value }}
-        />
-      </BoxWrapper>
+      <div
+        style={{ width: '100%' }}
+        dangerouslySetInnerHTML={{ __html: props.fields.code.value }}
+      />
     ),
     label: 'iframe',
     schema: {

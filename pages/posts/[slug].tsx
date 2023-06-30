@@ -10,7 +10,6 @@ import MarkdownLayout from '@components/markdown-layout'
 import YouTubeVideo from '@components/blocks/youtube-video'
 
 export default function NewPost({ post }) {
-  const imageSrc = `/images/posts/${post.slug}/${post.coverImage}`
   return (
     <MarkdownLayout
       meta={{
@@ -18,7 +17,7 @@ export default function NewPost({ post }) {
         title: post.title,
         excerpt: post.excerpt,
         image: {
-          src: imageSrc,
+          src: post.coverImage,
         },
       }}
     >
@@ -41,7 +40,7 @@ export default function NewPost({ post }) {
             return (
               <figure>
                 <Image
-                  src={`/images/posts/${post.slug}/${props.image}`}
+                  src={props.image}
                   width={props.width || 640}
                   height={props.height || 480}
                   alt={props.altText}
