@@ -30,6 +30,7 @@ const keystaticConfig = config({
           formatting: true,
           dividers: true,
           links: true,
+          images: true,
           componentBlocks,
         }),
       },
