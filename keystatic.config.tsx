@@ -21,6 +21,10 @@ const keystaticConfig = config({
       label: 'Posts',
       path: 'content/posts/*/',
       slugField: 'title',
+      format: {
+        contentField: 'content',
+      },
+      entryLayout: 'content',
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
         date: fields.date({ label: 'Date', validation: { isRequired: true } }),

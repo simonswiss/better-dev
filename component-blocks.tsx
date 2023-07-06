@@ -8,7 +8,7 @@ import useObjectURL from './use-object-url'
 
 function ImagePreview({ data }: { data: Uint8Array } & BoxProps) {
   const url = useObjectURL(data)
-  return <img style={{ width: '100%', display: 'block' }} src={url} alt="" />
+  return <img style={{ width: '100%', display: 'block' }} src={url || undefined} alt="" />
 }
 
 function BoxWrapper(props) {
