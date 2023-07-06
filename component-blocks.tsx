@@ -44,6 +44,7 @@ const componentBlocks = {
         label: 'Image',
         validation: { isRequired: true },
         directory: 'public/images/posts',
+        publicPath: '/images/posts',
       }),
       width: fields.integer({ label: 'Width', defaultValue: 640 }),
       height: fields.integer({ label: 'Height', defaultValue: 480 }),

@@ -41,11 +41,11 @@ export default function NewPost({ post }) {
             return (
               <figure>
                 <Image
-                  src={`/images/posts/${post.slug}/${props.image}`}
+                  src={props.image}
                   width={props.width || 640}
                   height={props.height || 480}
                   alt={props.altText}
-                  className={props.classes || 'max-h-[800px] w-auto shadow-lg rounded-lg'}
+                  className={props.classes || 'max-h-[800px] w-auto rounded-lg shadow-lg'}
                 />
 
                 {props.caption && (
