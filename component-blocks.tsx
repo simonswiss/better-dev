@@ -1,33 +1,43 @@
 import { fields, component } from '@keystatic/core'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
-import { Box, Flex, BoxProps } from '@voussoir/layout'
-import { ProgressCircle } from '@voussoir/progress'
+import { Box, Flex, BoxProps } from '@keystar/ui/layout'
+import { ProgressCircle } from '@keystar/ui/progress'
 
 import YouTubeVideo from './components/blocks/youtube-video'
 import useObjectURL from './use-object-url'
 
 function ImagePreview({ data }: { data: Uint8Array } & BoxProps) {
   const url = useObjectURL(data)
-  return <img style={{ width: '100%', display: 'block' }} src={url} alt="" />
+  return <img style={{ width: '100%', display: 'block' }} src={url || undefined} alt="" />
 }
 
 function BoxWrapper(props) {
-  return <Box maxWidth={480} border="neutral" borderRadius="regular" padding="regular" {...props} />
+  return (
+    <Box
+      maxWidth="container.xsmall"
+      border="neutral"
+      borderRadius="regular"
+      padding="regular"
+      {...props}
+    />
+  )
 }
 
 const componentBlocks = {
   image: component({
-    preview: (props) => (
-      <BoxWrapper>
-        {props.fields.image.value.kind === 'uploaded' ? (
-          <ImagePreview data={props.fields.image.value.data} />
-        ) : (
-          <Flex direction="column" gap="medium" alignItems="center">
-            <ProgressCircle aria-label="Loading…" isIndeterminate />
-          </Flex>
-        )}
-      </BoxWrapper>
-    ),
+    preview: (props) => {
+      return (
+        <BoxWrapper>
+          {props.fields.image.value ? (
+            <ImagePreview data={props.fields.image.value.data} />
+          ) : (
+            <Flex direction="column" gap="medium" alignItems="center">
+              <ProgressCircle aria-label="Loading…" isIndeterminate />
+            </Flex>
+          )}
+        </BoxWrapper>
+      )
+    },
     label: 'Image',
     schema: {
       image: fields.image({
@@ -44,7 +54,7 @@ const componentBlocks = {
   }),
   youtubeVideo: component({
     preview: (props) => (
-      <BoxWrapper maxWidth={600}>
+      <BoxWrapper maxWidth="container.small">
         <YouTubeVideo videoId={props.fields.videoId.value} />
       </BoxWrapper>
     ),
@@ -65,8 +75,17 @@ const componentBlocks = {
   iframe: component({
     preview: (props) => (
       <BoxWrapper>
+        <style>
+          {`
+            iframe {
+              width: 100%;
+              height: 100%;
+              border: none;
+            }
+          `}
+        </style>
         <div
-          style={{ width: '100%' }}
+          style={{ width: '100%', aspectRatio: '16/9' }}
           dangerouslySetInnerHTML={{ __html: props.fields.code.value }}
         />
       </BoxWrapper>
