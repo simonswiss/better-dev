@@ -19,7 +19,7 @@ const keystaticConfig = config({
   collections: {
     posts: collection({
       label: 'Posts',
-      path: 'content/posts/*/',
+      path: 'content/posts/*',
       slugField: 'title',
       format: {
         contentField: 'content',
