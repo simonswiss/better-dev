@@ -16,6 +16,11 @@ const storage: LocalConfig['storage'] | GitHubConfig['storage'] =
 
 const keystaticConfig = config({
   storage,
+  ui: {
+    brand: {
+      name: 'Better Dev Screencasts',
+    },
+  },
   collections: {
     posts: collection({
       label: 'Posts',
