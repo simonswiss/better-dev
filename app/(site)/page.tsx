@@ -16,8 +16,6 @@ const meta = {
 }
 export default async function Homepage() {
   const posts = await reader.collections.posts.all()
-  console.log({ posts })
-
   return (
     <>
       <PageMeta meta={meta} />

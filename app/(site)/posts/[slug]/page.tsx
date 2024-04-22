@@ -1,15 +1,16 @@
 import Image from 'next/image'
 
-import { createReader } from '@keystatic/core/reader'
 import { DocumentRenderer } from '@keystatic/core/renderer'
-import keystaticConfig from 'keystatic.config'
-
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 
-import MarkdownLayout from '@components/markdown-layout'
-import YouTubeVideo from '@components/blocks/youtube-video'
+import MarkdownLayout from '@/components/markdown-layout'
+import YouTubeVideo from '@/components/blocks/youtube-video'
+import { reader } from '@/lib/keystatic-reader'
 
-export default function NewPost({ post }) {
+export default async function NewPost({ params: { slug } }) {
+  const post = await reader.collections.posts.read(slug, { resolveLinkedFiles: true })
+
+  if (!post) throw new Error('Post not found')
   const imageSrc = `/content/posts/${post.slug}/${post.coverImage}`
   return (
     <MarkdownLayout
@@ -58,7 +59,8 @@ export default function NewPost({ post }) {
             )
           },
           tweet: (props) => (
-            <TwitterTweetEmbed tweetId={props.tweetId} options={{ conversation: 'none' }} />
+            <p>TODO</p>
+            // <TwitterTweetEmbed tweetId={props.tweetId} options={{ conversation: 'none' }} />
           ),
           youtubeVideo: (props) => <YouTubeVideo videoId={props.videoId} />,
           iframe: (props) => <div dangerouslySetInnerHTML={{ __html: props.code }} />,
@@ -68,27 +70,7 @@ export default function NewPost({ post }) {
   )
 }
 
-export async function getStaticPaths() {
-  const reader = createReader('', keystaticConfig)
-  const postSlugs = await reader.collections.posts.list()
-  return {
-    paths: postSlugs.map((slug) => ({ params: { slug } })),
-    fallback: false, // can also be true or 'blocking'
-  }
-}
-
-export async function getStaticProps({ params }) {
-  const { slug } = params
-  const reader = createReader('', keystaticConfig)
-  const postData = await reader.collections.posts.read(slug)
-  const content = await postData?.content()
-
-  return {
-    props: {
-      post: {
-        ...postData,
-        content,
-      },
-    },
-  }
+export async function generateStaticParams() {
+  const posts = await reader.collections.posts.list()
+  return posts.map((slug) => ({ params: { slug } }))
 }
