@@ -11,7 +11,7 @@ const keystaticConfig = config({
   collections: {
     posts: collection({
       label: 'Posts',
-      directory: 'public/content/posts',
+      path: 'public/content/posts/*/',
       slugField: 'slug',
       schema: {
         title: fields.text({ label: 'Title' }),
