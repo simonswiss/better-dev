@@ -1,0 +1,176 @@
+---
+title: The Best Video Transition Is Often... No Transition
+date: 2022-03-28
+excerpt: >-
+  When cutting from Scene A to Scene B, it's often tempting to use one of the
+  built-in transitions provided by your video editing software, like a
+  "cross-fade". Let's challenge that!
+coverImage: /images/posts/best-transition-often-no-transition/coverImage.jpg
+---
+
+Let's say you're editing a video, and you have these two bits of footage:
+
+<Columns columns={2}>
+  <Column>
+    <Image image="/images/posts/best-transition-often-no-transition/talking-head-frame.jpg" width={0} height={0} altText="Talking head on camera" caption="Scene A: Talking head" />
+  </Column>
+
+  <Column>
+    <Image image="/images/posts/best-transition-often-no-transition/code-frame.jpg" width={0} height={0} altText="Screenshot of a code editor" caption="Scene B: Code editor" />
+  </Column>
+</Columns>
+
+In hope of achieving a smooth transition between the two, it's often tempting to use one of the transition effects baked in video editing software, like a "crossfade":
+
+<Image
+  image="/images/posts/best-transition-often-no-transition/cross-dissolve.jpg"
+  width={0}
+  height={0}
+  altText="Screenshot of video editing software showing a cross-fade transition"
+  caption="A basic cross-disolve transition"
+/>
+
+Let's take a look at the result:
+
+<YoutubeVideo videoId="dwvJnpekT4E" />
+
+That looks decent. But did this really *improve* the edit?
+
+At first, you might feel like using "raw" cuts is being lazy and will look unpolished. The reality is that in most cases, a straight-up hard cut *will look better*.
+
+Here's a challenge – next time you're watching a movie, pay attention to the transitions used between scenes and camera angles. You'll find out that 99% of the time, there is no transition effect.
+
+Just a raw cut.
+
+> _Yeah, but... raw cuts are boring, Simon!_
+
+I know, but hear me out: you can have some fun with raw cuts too! They don't always have to be plain and boring. Let's talk about a simple but extremely powerful cutting technique:  `J-cuts` and `L-cuts`.
+
+## J-what and What-cuts?
+
+The `J-cut` and `L-cut` techniques decouple the audio and video cuts between Scene A and Scene B.
+
+In the case of a `J-cut`, the audio from Scene B comes in before the video from Scene B kicks in. And an `L-cut` is, well, the opposite.
+
+Confusing? This will help: these cuts take their name after the way they look in your video editor.
+
+Take a look at this – I've highlighted clips in pink to "reveal" the shape of those cuts:
+
+<Columns columns={2}>
+  <Column>
+    <Image image="/images/posts/best-transition-often-no-transition/j-cut.jpg" width={0} height={0} altText="Screenshot of video editing software showing a J-cut" caption="A J-cut" />
+  </Column>
+
+  <Column>
+    <Image image="/images/posts/best-transition-often-no-transition/l-cut.jpg" width={0} height={0} altText="Screenshot of video editing software showing an L-cut" caption="An L-cut" />
+  </Column>
+</Columns>
+
+Makes sense now, right? The pink shapes indeed look like a `J` and an `L` in those screenshots.
+
+### So, what do these achieve?
+
+`J-cuts` for example are an excellent tool to provide context about the next scene before it fully happens.
+
+If the movie industry doesn't use much transition effects, almost every single movie ever produced makes extensive use of these.
+
+A classic example in a movie scene is when someone is about to board a plane or head to the train station. You're watching a scene where the actor says goodbye to their family, inside the house, suitcases ready. In the background of that scene, you start hearing the sounds of an airplane taking off.
+
+A few seconds later, the movie cuts to a scene where a plane is taking off in the sky.
+
+Because you could hear the plane in the previous scene and gather some context on what was about to happen, the transition makes perfect sense.
+
+Here's an example of that, art directed by yours truly (sound on!):
+
+<YoutubeVideo videoId="gC6lODuCQ6c" />
+
+And here's how I implemented it. The procedure may slightly vary depending on what editing software you're using (I use DaVinci Resolve), but the steps are usually the same:
+
+**1. "Unlink" the audio and video tracks**, so they can be modified independently from one another. Unlink the audio and video clips
+
+<Image
+  image="/images/posts/best-transition-often-no-transition/j-cut-unlink.jpg"
+  width={0}
+  height={0}
+  caption="Unlink the audio and video clips"
+/>
+
+**2. Move the "split" point** of either the audio or video track to achieve your desired effect. Adjust the clips as you see fit!
+
+<Image
+  image="/images/posts/best-transition-often-no-transition/j-cut-example.jpg"
+  width={0}
+  height={0}
+  caption="Adjust the clips as you see fit!"
+/>
+
+Next time you watch a movie, try and spot where `J-cuts` and `L-cuts` are used to make a scene transition much more interesting and evident!
+
+## But... J-cuts for coding videos? I'm not directing a movie over here!
+
+While the most powerful aspect of `J-cuts` and `L-cuts` is *enhanced storytelling*, these cuts are also excellent at doing some "repairs" and saving some of your rough scene transitions.
+
+Take the following on-camera footage. I look down before I finish my sentence, which kinda ruins this clip and makes it hard to use in my video:
+
+<YoutubeVideo videoId="L9xDF0yi-tQ" />
+
+Bummer! Do I set up my lights and camera, and gear up for re-recording, just to fix this small segment?
+
+**Ugh**.
+
+Oh wait. Perhaps a clever `L-cut` can help us here! Maybe I can switch to the code editor earlier, while I'm still talking:
+
+<Image
+  image="/images/posts/best-transition-often-no-transition/l-cut-example.jpg"
+  width={0}
+  height={0}
+  caption="L-cut to the rescue!"
+/>
+
+Let's take a look at the result:
+
+<YoutubeVideo videoId="pr2OnYqwUTk" />
+
+That's actually pretty solid! Cutting to the code scene while talking didn't feel unnatural, because the context of me speaking was already established.
+
+I'm not really taking any shortcuts, and I didn't need to start a new recording session just for this one clip!
+
+Don't be afraid to experiment with `J-cuts` and `L-cuts`, they're a fantastic tool to add to your editing bag of tricks.
+
+In the vast majority of scenarios, they will look more polished and professional than if you had used a transition effect like a crossfade.
+
+## So, you're saying to *never* use a cross-fade?
+
+Wait, no! That's not what I mean! **Never say never**.
+
+First of all, if cross-fades are your jam, by all means, please, use them wherever you want! 🤗
+
+As a rule of thumb - and that's the way I approach video editing personally - I'd say the most appropriate use cases for using a transition effect is **when you're trying to mask/hide a little hiccup** and improve the situation, or you want to achieve a very specific and intentional effect.
+
+Perhaps your lines of code don't align between scene A or scene B? A subtle and very short cross-fade can help smoothen the jump here.
+
+Merging two scrolling motions together works quite well with a cross-fade transition.
+
+Sometimes, you're cutting between two scenes that are different, but almost *too similar*. Here, adding an effect can accentuate the fact you're changing to a different scene.
+
+## Conclusion
+
+Transition effects definitely have very valid use cases when editing a video. There is a reason why they're baked in every single video editing software.
+
+All I'm suggesting is, try and use transition effects to achieve a specific task, in a specific scenario. Don't make it the "default" transition between every scene change in your project, even if it may be tempting to do so at first.
+
+"Transition-effect-as-a-default" usually comes out as a sign of beginner/amateur movie-making, rather than the "premium" edit you're hoping for.
+
+Not shaming anyone here, almost everyone does it. Matter of fact, I dug up my very first video on YouTube (from 2006, 15+ years ago), and sure enough, *almost every single transition* has an effect:
+
+<Iframe code="<iframe class=\&#x22;my-8 aspect-video w-full rounded-2xl shadow-2xl\&#x22; src=\&#x22;https://www.youtube.com/embed/g8j9DIPgk30?controls=0\&#x22; title=\&#x22;YouTube video player\&#x22; frame-border=\&#x22;0\&#x22; allow=\&#x22;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\&#x22; allow-full-screen></iframe>" />
+
+I remember absolutely loving the "fade to white" effect. With a short duration, it felt like a camera flash and had this cool vibe to it.
+
+Instead of using it as a special effect in a few particular places, I made it my *default transition*.
+
+And present version of simonswiss, 15+ years later of making videos, suggests the following:
+
+**Don't over-do it**.
+
+Make using transition effects *the special case*, instead of the norm.

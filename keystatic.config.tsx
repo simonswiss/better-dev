@@ -1,6 +1,6 @@
 import { config, fields, collection, LocalConfig, GitHubConfig } from '@keystatic/core'
 
-import componentBlocks from './component-blocks'
+import contentComponents from './content-components'
 
 // Storage strategy
 const storage: LocalConfig['storage'] | GitHubConfig['storage'] =
@@ -39,13 +39,9 @@ const keystaticConfig = config({
           directory: 'public/images/posts',
           publicPath: '/images/posts',
         }),
-        content: fields.document({
+        content: fields.mdx({
           label: 'Post copy',
-          layouts: [[1, 1]],
-          formatting: true,
-          dividers: true,
-          links: true,
-          componentBlocks,
+          components: contentComponents,
         }),
       },
     }),

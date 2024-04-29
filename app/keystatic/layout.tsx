@@ -7,7 +7,6 @@ export const metadata = {
 export default function RootLayout() {
   return (
     <html>
-      <head />
       <body>
         <KeystaticApp />
       </body>
