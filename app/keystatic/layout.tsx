@@ -5,5 +5,11 @@ export const metadata = {
 }
 
 export default function RootLayout() {
-  return <KeystaticApp />
+  return (
+    <html>
+      <body>
+        <KeystaticApp />
+      </body>
+    </html>
+  )
 }
