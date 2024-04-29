@@ -1,18 +1,16 @@
+'use client'
+
 /* eslint-disable react/no-unescaped-entities */
-import { format } from 'date-fns'
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { format } from 'date-fns'
 
-import socialImageLarge from '/public/images/social-large.jpg'
 import MailChimpSubscription from './mailchimp'
 
 export default function MarkdownLayout({ meta, children }) {
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 md:pt-20 lg:px-8 2xl:max-w-8xl">
-      <Metadata meta={meta} />
-      <div className="prose prose-slate mx-auto break-words prose-blockquote:border-indigo-500 prose-blockquote:text-indigo-900 prose-figure:mt-0 prose-figcaption:mt-0 lg:prose-lg lg:prose-figure:mt-0 lg:prose-figcaption:mt-0 xl:prose-xl xl:prose-figure:mt-2 xl:prose-figcaption:mt-0 2xl:prose-figcaption:mt-0">
+    <div className="px-4 pt-8 mx-auto max-w-7xl sm:px-6 md:pt-20 lg:px-8 2xl:max-w-8xl">
+      <div className="mx-auto prose break-words prose-slate prose-blockquote:border-indigo-500 prose-blockquote:text-indigo-900 prose-figure:mt-0 prose-figcaption:mt-0 lg:prose-lg lg:prose-figure:mt-0 lg:prose-figcaption:mt-0 xl:prose-xl xl:prose-figure:mt-2 xl:prose-figcaption:mt-0 2xl:prose-figcaption:mt-0">
         <h1>{meta.title}</h1>
         <p className="text-base text-slate-500">
           Posted on {format(new Date(meta.date), 'd MMMM yyy')}
@@ -23,12 +21,12 @@ export default function MarkdownLayout({ meta, children }) {
           <div className="mt-8">{children}</div>
         </div>
         {/* Author footer */}
-        <footer className="not-prose mt-20 rounded-lg bg-white p-8 shadow lg:mt-32">
+        <footer className="p-8 mt-20 bg-white rounded-lg shadow not-prose lg:mt-32">
           <div className="flex items-center gap-4 text-sm md:text-base">
             <div className="shrink-0">
               <Image
                 src="/images/twitter-avatar.png"
-                className="rounded-full object-cover"
+                className="object-cover rounded-full"
                 width={80}
                 height={80}
                 alt="avatar for simonswiss"
@@ -70,64 +68,5 @@ export default function MarkdownLayout({ meta, children }) {
         </footer>
       </div>
     </div>
-  )
-}
-
-function Metadata({ meta }) {
-  let router = useRouter()
-
-  return (
-    <Head>
-      <title>{`${meta.title} | Better Dev Screencasts`}</title>
-      <meta name="twitter:site" content="@simonswiss" key="twitter:site" />
-      <meta name="twitter:creator" content="@simonswiss" key="twitter:creator" />
-      <meta
-        name="twitter:title"
-        content={`${meta.title} | Better Dev Screencasts`}
-        key="twitter:title"
-      />
-      <meta name="twitter:description" content={meta.excerpt} key="twitter:description" />
-      {meta.image ? (
-        <>
-          <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
-          <meta
-            name="twitter:image"
-            key="twitter:image"
-            content={`https://betterdevscreencasts.com${meta.image.src}`}
-          />
-        </>
-      ) : (
-        <>
-          <meta name="twitter:card" content="summary" key="twitter:card" />
-          <meta
-            name="twitter:image"
-            key="twitter:image"
-            content={`https://betterdevscreencasts.com/${socialImageLarge.src}`}
-          />
-        </>
-      )}
-      <meta
-        property="og:url"
-        content={`https://betterdevscreencasts.com${router.asPath}`}
-        key="og:url"
-      />
-      <meta property="og:type" content="article" key="og:type" />
-      <meta property="og:title" content={`${meta.title} | Better Dev Screencasts`} key="og:title" />
-      <meta property="og:description" content={meta.excerpt} key="og:description" />
-      {meta.image ? (
-        <meta
-          property="og:image"
-          content={`https://betterdevscreencasts.com${meta.image.src}`}
-          key="og:image"
-        />
-      ) : (
-        <meta
-          property="og:image"
-          content={`https://betterdevscreencasts.com/${socialImageLarge.src}`}
-          key="og:image"
-        />
-      )}
-      <meta name="description" content={meta.excerpt} key="description"></meta>
-    </Head>
   )
 }

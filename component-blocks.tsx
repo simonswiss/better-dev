@@ -1,15 +1,15 @@
 import { fields, component } from '@keystatic/core'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import { Box, Flex, BoxProps } from '@keystar/ui/layout'
-import { ProgressCircle } from '@keystar/ui/progress'
+// import { ProgressCircle } from '@keystar/ui/progress'
 
 import YouTubeVideo from './components/blocks/youtube-video'
-import useObjectURL from './use-object-url'
+// import useObjectURL from './use-object-url'
 
-function ImagePreview({ data }: { data: Uint8Array } & BoxProps) {
-  const url = useObjectURL(data)
-  return <img style={{ width: '100%', display: 'block' }} src={url || undefined} alt="" />
-}
+// function ImagePreview({ data }: { data: Uint8Array } & BoxProps) {
+//   const url = useObjectURL(data)
+//   return <img style={{ width: '100%', display: 'block' }} src={url || undefined} alt="" />
+// }
 
 function BoxWrapper(props) {
   return (
@@ -29,10 +29,11 @@ const componentBlocks = {
       return (
         <BoxWrapper>
           {props.fields.image.value ? (
-            <ImagePreview data={props.fields.image.value.data} />
+            ''
           ) : (
+            // <ImagePreview data={props.fields.image.value.data} />
             <Flex direction="column" gap="medium" alignItems="center">
-              <ProgressCircle aria-label="Loading…" isIndeterminate />
+              {/* <ProgressCircle aria-label="Loading…" isIndeterminate /> */}
             </Flex>
           )}
         </BoxWrapper>
