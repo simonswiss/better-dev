@@ -24,8 +24,8 @@ export default function NewPosts({ posts }) {
         <p>{meta.description}</p>
       </PageHeading>
       {posts.length === 0 ? (
-        <div className="mx-auto mt-12 max-w-7xl px-4 sm:px-6 md:mt-16 lg:mt-24 lg:px-8 2xl:max-w-8xl">
-          <footer className="inline-block max-w-xl rounded-lg bg-indigo-50 p-8 shadow-sm">
+        <div className="px-4 mx-auto mt-12 max-w-7xl sm:px-6 md:mt-16 lg:mt-24 lg:px-8 2xl:max-w-8xl">
+          <footer className="inline-block max-w-xl p-8 rounded-lg shadow-sm bg-indigo-50">
             <div className="space-y-4">
               <p className="text-indigo-900">
                 There are no posts in this category... yet. Check back soon!
@@ -34,7 +34,7 @@ export default function NewPosts({ posts }) {
           </footer>
         </div>
       ) : (
-        <div className="mx-auto mt-12 grid max-w-7xl gap-x-8 gap-y-12 px-4 sm:px-6 md:mt-16 lg:mt-24 lg:grid-cols-2 lg:gap-y-16 lg:px-8 2xl:max-w-8xl 2xl:grid-cols-3">
+        <div className="grid px-4 mx-auto mt-12 max-w-7xl gap-x-8 gap-y-12 sm:px-6 md:mt-16 lg:mt-24 lg:grid-cols-2 lg:gap-y-16 lg:px-8 2xl:max-w-8xl 2xl:grid-cols-3">
           {posts.map((post) => {
             const imageSrc = post.coverImage ?? seoImage.src
             return (
@@ -57,7 +57,7 @@ export default function NewPosts({ posts }) {
                 <p className="mt-2 text-slate-700">{post.excerpt}</p>
                 <Link
                   href={`/posts/${post.slug}`}
-                  className="mt-4 block font-medium text-indigo-500 hover:underline"
+                  className="block mt-4 font-medium text-indigo-500 hover:underline"
                 >
                   Read more &rarr;
                 </Link>
