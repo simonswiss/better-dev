@@ -6,13 +6,13 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 import socialImageLarge from '/public/images/social-large.jpg'
-import MailChimpSubscription from './mailchimp'
+import { KitForm } from './kit'
 
 export default function MarkdownLayout({ meta, children }) {
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 md:pt-20 lg:px-8 2xl:max-w-8xl">
+    <div className="px-4 pt-8 mx-auto max-w-7xl sm:px-6 md:pt-20 lg:px-8 2xl:max-w-8xl">
       <Metadata meta={meta} />
-      <div className="prose prose-slate mx-auto break-words prose-blockquote:border-indigo-500 prose-blockquote:text-indigo-900 prose-figure:mt-0 prose-figcaption:mt-0 lg:prose-lg lg:prose-figure:mt-0 lg:prose-figcaption:mt-0 xl:prose-xl xl:prose-figure:mt-2 xl:prose-figcaption:mt-0 2xl:prose-figcaption:mt-0">
+      <div className="mx-auto prose break-words prose-slate prose-blockquote:border-indigo-500 prose-blockquote:text-indigo-900 prose-figure:mt-0 prose-figcaption:mt-0 lg:prose-lg lg:prose-figure:mt-0 lg:prose-figcaption:mt-0 xl:prose-xl xl:prose-figure:mt-2 xl:prose-figcaption:mt-0 2xl:prose-figcaption:mt-0">
         <h1>{meta.title}</h1>
         <p className="text-base text-slate-500">
           Posted on {format(new Date(meta.date), 'd MMMM yyy')}
@@ -23,12 +23,12 @@ export default function MarkdownLayout({ meta, children }) {
           <div className="mt-8">{children}</div>
         </div>
         {/* Author footer */}
-        <footer className="not-prose mt-20 rounded-lg bg-white p-8 shadow lg:mt-32">
+        <footer className="p-8 mt-20 bg-white rounded-lg shadow not-prose lg:mt-32">
           <div className="flex items-center gap-4 text-sm md:text-base">
             <div className="shrink-0">
               <Image
                 src="/images/twitter-avatar.png"
-                className="rounded-full object-cover"
+                className="object-cover rounded-full"
                 width={80}
                 height={80}
                 alt="avatar for simonswiss"
@@ -66,7 +66,7 @@ export default function MarkdownLayout({ meta, children }) {
             </p> */}
           </div>
 
-          <MailChimpSubscription />
+          <KitForm />
         </footer>
       </div>
     </div>
